@@ -1,0 +1,620 @@
+Model,battery_health,battery_renew,screen_replacement,display_replacement,storage,colour,Release_Date,backglass_damages,screen_damages,availability,ios_updates,IMEI_number,Months_since_release,price_at,Exchange_rate_1_USD_to_LKR,current_price(LKR)
+iphone se 2,100,False,False,False,64,Red,2020-04-01,False,undamaged,full-set,True,,25,2022-05-01,341.85,86800
+iphone x,100,False,False,False,64,Space Gray,2017-11-01,False,undamaged,full-set,False,,54,2022-05-01,341.85,85200
+iphone 8,88,False,False,False,64,Silver,2017-09-01,False,undamaged,full-set,False,,56,2022-05-01,341.85,54720
+iphone 7 plus,100,False,False,False,128,Jet Black,2016-09-01,False,undamaged,full-set,False,,68,2022-05-01,341.85,44800
+iphone 7,65,True,True,False,32,Gold,2016-09-01,False,undamaged,full-set,False,,68,2022-05-01,341.85,22400
+iphone 6s plus,93,False,False,True,32,Rose Gold,2015-09-01,False,undamaged,full-set,False,,80,2022-05-01,341.85,27280
+iphone 6s,62,True,False,False,32,Space Gray,2015-09-01,False,undamaged,full-set,False,,80,2022-05-01,341.85,22320
+iphone se 3,100,False,False,False,256,Red,2022-03-01,False,undamaged,full-set,True,,2,2022-05-01,341.85,123900
+iphone se 3,100,False,False,False,256,White,2022-03-01,False,undamaged,full-set,True,,2,2022-05-01,341.85,128620
+iphone se 3,96,False,False,False,128,White,2022-03-01,False,undamaged,full-set,True,,2,2022-05-01,341.85,105400
+iphone se 3,96,False,False,False,64,Black,2022-03-01,False,undamaged,full-set,True,,2,2022-05-01,341.85,102920
+iphone xr,96,False,False,False,512,Blue,2018-10-01,False,undamaged,full-set,True,,43,2022-05-01,341.85,136880
+iphone se 3,100,False,False,False,64,White,2022-03-01,False,undamaged,full-set,True,,2,2022-05-01,341.85,105400
+iphone se 3,92,False,False,False,32,Black,2022-03-01,False,undamaged,full-set,True,,2,2022-05-01,341.85,83080
+iphone se 3,99,False,False,False,32,White,2022-03-01,False,undamaged,full-set,True,,2,2022-05-01,341.85,93000
+iphone se 2,100,False,False,False,256,White,2020-04-01,False,undamaged,full-set,True,,25,2022-05-01,341.85,111600
+iphone se 2,100,False,False,False,256,White,2020-04-01,False,undamaged,full-set,True,,25,2022-05-01,341.85,116560
+iphone se 2,100,True,False,False,128,Red,2020-04-01,False,undamaged,full-set,True,,25,2022-05-01,341.85,86800
+iphone se 2,96,False,False,False,128,White,2020-04-01,False,undamaged,full-set,True,,25,2022-05-01,341.85,86800
+iphone se 2,96,False,False,False,64,Black,2020-04-01,False,undamaged,full-set,True,,25,2022-05-01,341.85,84320
+iphone se 2,99,False,True,False,32,White,2020-04-01,False,undamaged,full-set,True,,25,2022-05-01,341.85,62000
+iphone se 2,92,False,False,False,32,Black,2020-04-01,False,undamaged,full-set,True,,25,2022-05-01,341.85,64480
+iphone se 2,99,False,False,False,32,White,2020-04-01,False,undamaged,full-set,True,,25,2022-05-01,341.85,74400
+iphone se 3,99,False,True,False,32,Red,2022-03-01,False,undamaged,full-set,True,,2,2022-05-01,341.85,80600
+iphone xs,90,False,True,False,512,Gold,2018-09-01,False,undamaged,full-set,True,,44,2022-05-01,341.85,84640
+iphone se 3,100,True,False,False,128,Red,2022-03-01,False,undamaged,full-set,True,,2,2022-05-01,341.85,105400
+iphone 11,99,False,False,False,64,Black,2019-09-01,False,undamaged,full-set,True,,32,2022-05-01,341.85,106400
+iphone 13 mini,75,True,True,False,256,Pink,2021-09-01,False,undamaged,full-set,True,,8,2022-05-01,341.85,147000
+iphone 13 mini,92,False,False,False,128,Green,2021-09-01,False,undamaged,full-set,True,,8,2022-05-01,341.85,135600
+iphone xs max,100,True,False,True,512,Space Gray,2018-09-01,False,undamaged,full-set,True,,44,2022-05-01,341.85,133200
+iphone 13 pro max,85,False,False,True,128,Gold,2021-09-01,False,undamaged,full-set,True,,8,2022-05-01,341.85,198400
+iphone 13 pro,90,False,False,False,512,Sierra Blue,2021-09-01,False,undamaged,full-set,True,,8,2022-05-01,341.85,211200
+iphone 13 pro,82,False,False,False,128,Graphite,2021-09-01,False,undamaged,full-set,True,,8,2022-05-01,341.85,186000
+iphone 13,87,True,False,False,256,Red,2021-09-01,False,undamaged,full-set,True,,8,2022-05-01,341.85,171300
+iphone 13,100,False,False,False,128,Midnight,2021-09-01,False,undamaged,full-set,True,,8,2022-05-01,341.85,155000
+iphone 13,100,False,False,False,128,Starlight,2021-09-01,False,undamaged,full-set,True,,8,2022-05-01,341.85,155000
+iphone 12 pro max,90,False,True,False,512,Pacific Blue,2020-10-01,False,undamaged,full-set,True,,19,2022-05-01,341.85,172800
+iphone 12 pro,97,False,False,False,256,Graphite,2020-10-01,False,undamaged,full-set,True,,19,2022-05-01,341.85,145600
+iphone 12,78,True,False,False,128,White,2020-10-01,False,undamaged,full-set,True,,19,2022-05-01,341.85,117600
+iphone 13 pro max,80,True,False,False,512,Graphite,2021-09-01,False,undamaged,full-set,True,,8,2022-05-01,341.85,272800
+iphone 11 pro max,76,True,True,False,512,Midnight Green,2019-09-01,False,undamaged,full-set,True,,32,2022-05-01,341.85,118000
+iphone 12,93,False,False,False,64,Blue,2020-10-01,False,undamaged,full-set,True,,19,2022-05-01,341.85,106400
+iphone 11,92,False,False,False,64,White,2019-09-01,False,undamaged,full-set,True,,32,2022-05-01,341.85,103680
+iphone 11,100,False,False,False,128,Green,2019-09-01,False,undamaged,full-set,True,,32,2022-05-01,341.85,124400
+iphone 11,96,False,False,False,128,Purple,2019-09-01,False,undamaged,full-set,True,,32,2022-05-01,341.85,122240
+iphone 11,96,False,False,False,256,White,2019-09-01,False,undamaged,full-set,True,,32,2022-05-01,341.85,124400
+iphone 11,99,False,True,False,64,Red,2019-09-01,False,undamaged,full-set,True,,32,2022-05-01,341.85,101200
+iphone 11,100,False,False,False,512,Green,2019-09-01,False,undamaged,full-set,True,,32,2022-05-01,341.85,152400
+iphone 11,98,False,False,False,512,Purple,2019-09-01,False,undamaged,full-set,True,,32,2022-05-01,341.85,146400
+iphone 11 pro,78,True,False,False,256,Gold,2019-09-01,False,undamaged,full-set,True,,32,2022-05-01,341.85,100300
+iphone 11,100,True,False,False,256,Red,2019-09-01,False,undamaged,full-set,True,,32,2022-05-01,341.85,124400
+iphone xs max,98,True,False,True,512,Space Gray,2018-09-01,False,undamaged,full-set,True,,50,2022-11-01,363.3,127440
+iphone 11,100,True,False,False,256,Red,2019-09-01,False,undamaged,full-set,True,,38,2022-11-01,363.3,123900
+iphone 11,97,False,False,False,64,Black,2019-09-01,False,undamaged,full-set,True,,38,2022-11-01,363.3,112100
+iphone 11,90,False,False,False,64,White,2019-09-01,False,undamaged,full-set,True,,38,2022-11-01,363.3,102660
+iphone 11,97,False,True,False,64,Red,2019-09-01,False,undamaged,full-set,True,,38,2022-11-01,363.3,100300
+iphone 11,98,False,False,False,128,Green,2019-09-01,False,undamaged,full-set,True,,38,2022-11-01,363.3,123900
+iphone xs,88,False,True,False,512,Gold,2018-09-01,False,undamaged,full-set,True,,50,2022-11-01,363.3,84960
+iphone 11,94,False,False,False,128,Purple,2019-09-01,False,undamaged,full-set,True,,38,2022-11-01,363.3,121540
+iphone 11,94,False,False,False,256,White,2019-09-01,False,undamaged,full-set,True,,38,2022-11-01,363.3,123900
+iphone 11,100,False,False,False,512,Green,2019-09-01,False,undamaged,full-set,True,,38,2022-11-01,363.3,154580
+iphone 12,78,True,False,False,128,White,2020-10-01,False,undamaged,full-set,True,,25,2022-11-01,363.3,123900
+iphone 11 pro,78,True,False,False,256,Gold,2019-09-01,False,undamaged,full-set,True,,38,2022-11-01,363.3,100300
+iphone 11 pro max,76,True,True,False,512,Midnight Green,2019-09-01,False,undamaged,full-set,True,,38,2022-11-01,363.3,118000
+iphone 12,95,False,False,False,64,Blue,2020-10-01,False,undamaged,full-set,True,,25,2022-11-01,363.3,112100
+iphone 12 pro,97,False,False,False,256,Graphite,2020-10-01,False,undamaged,full-set,True,,25,2022-11-01,363.3,153400
+iphone 12 pro max,90,False,True,False,512,Pacific Blue,2020-10-01,False,undamaged,full-set,True,,25,2022-11-01,363.3,188800
+iphone 13,100,False,False,False,128,Starlight,2021-09-01,False,undamaged,full-set,True,,14,2022-11-01,363.3,147500
+iphone 13,100,False,False,False,128,Midnight,2021-09-01,False,undamaged,full-set,True,,14,2022-11-01,363.3,147500
+iphone 13,87,True,False,False,256,Red,2021-09-01,False,undamaged,full-set,True,,14,2022-11-01,363.3,159300
+iphone x,100,False,False,False,64,Space Gray,2017-11-01,False,undamaged,full-set,False,,60,2022-11-01,363.3,81420
+iphone 11,98,False,False,False,512,Purple,2019-09-01,False,undamaged,full-set,True,,38,2022-11-01,363.3,149860
+iphone 8,86,False,False,False,64,Silver,2017-09-01,False,undamaged,full-set,False,,62,2022-11-01,363.3,53100
+iphone se 3,94,False,False,False,64,Black,2022-03-01,False,undamaged,full-set,True,,8,2022-11-01,363.3,97940
+iphone 7,65,True,True,False,32,Gold,2016-09-01,False,undamaged,full-set,False,,74,2022-11-01,363.3,23600
+iphone 13 pro,88,False,False,False,128,Graphite,2021-09-01,False,undamaged,full-set,True,,14,2022-11-01,363.3,177000
+iphone se 3,94,False,False,False,128,White,2022-03-01,False,undamaged,full-set,True,,8,2022-11-01,363.3,100300
+iphone se 3,98,False,False,False,64,White,2022-03-01,False,undamaged,full-set,True,,8,2022-11-01,363.3,100300
+iphone se 2,97,False,False,False,32,White,2020-04-01,False,undamaged,full-set,True,,31,2022-11-01,363.3,70800
+iphone se 2,90,False,False,False,32,Black,2020-04-01,False,undamaged,full-set,True,,31,2022-11-01,363.3,61360
+iphone se 2,97,False,True,False,32,White,2020-04-01,False,undamaged,full-set,True,,31,2022-11-01,363.3,59000
+iphone se 2,98,False,False,False,64,Red,2020-04-01,False,undamaged,full-set,True,,31,2022-11-01,363.3,82600
+iphone se 2,94,False,False,False,64,Black,2020-04-01,False,undamaged,full-set,True,,31,2022-11-01,363.3,80240
+iphone se 2,94,False,False,False,128,White,2020-04-01,False,undamaged,full-set,True,,31,2022-11-01,363.3,82600
+iphone 7 plus,98,False,False,False,128,Jet Black,2016-09-01,False,undamaged,full-set,False,,74,2022-11-01,363.3,47200
+iphone se 2,100,True,False,False,128,Red,2020-04-01,False,undamaged,full-set,True,,31,2022-11-01,363.3,82600
+iphone se 2,98,False,False,False,256,White,2020-04-01,False,undamaged,full-set,True,,31,2022-11-01,363.3,106200
+iphone se 3,97,False,False,False,32,White,2022-03-01,False,undamaged,full-set,True,,8,2022-11-01,363.3,88500
+iphone se 3,90,False,False,False,32,Black,2022-03-01,False,undamaged,full-set,True,,8,2022-11-01,363.3,79060
+iphone se 3,97,False,True,False,32,Red,2022-03-01,False,undamaged,full-set,True,,8,2022-11-01,363.3,76700
+iphone se 3,100,True,False,False,128,Red,2022-03-01,False,undamaged,full-set,True,,8,2022-11-01,363.3,100300
+iphone se 3,100,False,False,False,256,White,2022-03-01,False,undamaged,full-set,True,,8,2022-11-01,363.3,128620
+iphone se 3,98,False,False,False,256,Red,2022-03-01,False,undamaged,full-set,True,,8,2022-11-01,363.3,123900
+iphone 6s,62,True,False,False,32,Space Gray,2015-09-01,False,undamaged,full-set,False,,86,2022-11-01,363.3,21240
+iphone 6s plus,91,False,False,True,32,Rose Gold,2015-09-01,False,undamaged,full-set,False,,86,2022-11-01,363.3,25960
+iphone se 2,100,False,False,False,256,White,2020-04-01,False,undamaged,full-set,True,,31,2022-11-01,363.3,110920
+iphone 13 pro,96,False,False,False,512,Sierra Blue,2021-09-01,False,undamaged,full-set,True,,14,2022-11-01,363.3,212400
+iphone xr,96,False,False,False,512,Blue,2018-10-01,False,undamaged,full-set,True,,49,2022-11-01,363.3,136880
+iphone 13 pro max,80,True,False,False,512,Graphite,2021-09-01,False,undamaged,full-set,True,,14,2022-11-01,363.3,259600
+iphone 13 mini,98,False,False,False,128,Green,2021-09-01,False,undamaged,full-set,True,,14,2022-11-01,363.3,129800
+iphone 13 mini,75,True,True,False,256,Pink,2021-09-01,False,undamaged,full-set,True,,14,2022-11-01,363.3,141600
+iphone 13 pro max,91,False,False,True,128,Gold,2021-09-01,False,undamaged,full-set,True,,14,2022-11-01,363.3,188800
+iphone 12 pro,98,False,False,False,128,White,2020-10-01,False,undamaged,full-set,False,356689110214202.0,27,2023-01-01,363.11,147500
+iphone 12 pro,92,False,False,False,128,White,2020-10-01,False,undamaged,full-set,False,356690113166100.0,27,2023-01-01,363.11,147500
+iphone 12 pro,94,False,False,False,128,Blue,2020-10-01,False,undamaged,full-set,False,354523338019246.0,27,2023-01-01,363.11,147500
+iphone 12 pro max,100,False,False,False,256,Gold,2020-10-01,False,undamaged,full-set,False,356728110928856.0,27,2023-01-01,363.11,198240
+iphone 12 pro max,99,False,False,False,256,White,2020-10-01,False,undamaged,full-set,False,354860895226560.0,27,2023-01-01,363.11,198240
+iphone 12 pro max,100,False,False,False,512,Blue,2020-10-01,False,undamaged,full-set,False,356719111915513.0,27,2023-01-01,363.11,210040
+iphone 13,95,False,False,False,256,White,2021-09-01,False,undamaged,full-set,False,354300906832874.0,16,2023-01-01,363.11,171100
+iphone 7,76,False,False,False,128,Jet Black,2016-09-01,False,undamaged,full-set,False,,76,2023-01-01,363.11,35400
+iphone 7,67,True,False,False,32,Matte Black,2016-09-01,False,undamaged,full-set,False,,76,2023-01-01,363.11,25960
+iphone 8,91,False,True,False,64,Gold,2017-09-01,False,undamaged,full-set,False,,64,2023-01-01,363.11,56640
+iphone 12 pro,95,False,False,False,128,White,2020-10-01,False,undamaged,full-set,False,358915486779633.0,27,2023-01-01,363.11,147500
+iphone 8 plus,98,True,False,False,64,Space Gray,2017-09-01,False,undamaged,full-set,False,,64,2023-01-01,363.11,64900
+iphone x,98,False,False,False,256,Silver,2017-11-01,False,undamaged,full-set,False,,62,2023-01-01,363.11,70800
+iphone xr,91,False,False,False,128,Yellow,2018-10-01,False,undamaged,phone-only,True,,51,2023-01-01,363.11,82600
+iphone xs,96,False,True,False,512,Gold,2018-09-01,False,undamaged,full-set,True,,52,2023-01-01,363.11,88500
+iphone xs max,95,True,False,False,64,Space Gray,2018-09-01,False,undamaged,full-set,True,,52,2023-01-01,363.11,82600
+iphone 11 pro,88,False,True,False,128,Midnight Green,2019-09-01,False,undamaged,full-set,True,,40,2023-01-01,363.11,118000
+iphone 11,94,False,False,False,64,Purple,2019-09-01,False,undamaged,full-set,True,,40,2023-01-01,363.11,100300
+iphone 7 plus,100,False,False,False,32,Silver,2016-09-01,False,undamaged,full-set,False,,76,2023-01-01,363.11,41300
+iphone 12 pro,97,False,False,False,128,Blue,2020-10-01,False,undamaged,full-set,False,350320090319912.0,27,2023-01-01,363.11,147500
+iphone 13,99,False,False,False,128,Green,2021-09-01,False,undamaged,full-set,False,351548605302358.0,16,2023-01-01,363.11,165200
+iphone 12 pro,98,False,False,False,256,Blue,2020-10-01,False,undamaged,full-set,False,356961134900102.0,27,2023-01-01,363.11,159300
+iphone 7 plus,100,True,False,False,128,Black,2016-09-01,False,undamaged,full-set,False,355834088232650.0,76,2023-01-01,363.11,56640
+iphone 12 pro,98,False,False,False,256,White,2020-10-01,False,undamaged,full-set,False,356685112918378.0,27,2023-01-01,363.11,159300
+iphone 7 plus,100,True,False,False,128,Black,2016-09-01,False,undamaged,full-set,False,355834088232650.0,76,2023-01-01,363.11,53100
+iphone 8 plus,100,True,False,False,256,Rose Gold,2017-09-01,False,undamaged,full-set,False,356733082293727.0,64,2023-01-01,363.11,68440
+iphone 8 plus,100,True,False,False,256,Black,2017-09-01,False,undamaged,full-set,False,356733085212468.0,64,2023-01-01,363.11,68440
+iphone x,100,True,False,False,64,White,2017-11-01,False,undamaged,full-set,False,354866091999538.0,62,2023-01-01,363.11,64900
+iphone x,100,True,False,False,256,Black,2017-11-01,False,undamaged,phone-only,False,353020090161549.0,62,2023-01-01,363.11,74340
+iphone xs,100,True,False,False,256,Black,2018-09-01,False,undamaged,full-set,False,357235094112308.0,52,2023-01-01,363.11,93220
+iphone xs,100,True,False,False,64,Gold,2018-09-01,False,undamaged,full-set,False,357228095332785.0,52,2023-01-01,363.11,76700
+iphone x,100,True,False,False,256,White,2017-11-01,False,undamaged,full-set,False,354862096007518.0,62,2023-01-01,363.11,76700
+iphone xs,96,False,False,False,128,Black,2018-09-01,False,undamaged,full-set,False,,52,2023-01-01,363.11,88500
+iphone xs max,94,False,False,False,256,Black,2018-09-01,False,undamaged,full-set,False,357274091766014.0,52,2023-01-01,363.11,103840
+iphone 7 plus,100,True,False,False,128,Black,2016-09-01,False,undamaged,full-set,False,356568085675664.0,76,2023-01-01,363.11,53100
+iphone 11,97,False,False,False,128,Black,2019-09-01,False,undamaged,full-set,False,356555102295659.0,40,2023-01-01,363.11,106200
+iphone 11,95,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,356327107225548.0,40,2023-01-01,363.11,118000
+iphone 11,97,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,353980102889868.0,40,2023-01-01,363.11,118000
+iphone 11 pro,100,False,False,False,256,Red,2019-09-01,False,undamaged,full-set,False,353246109357022.0,40,2023-01-01,363.11,135700
+iphone xs,100,True,False,False,64,Black,2018-09-01,False,undamaged,full-set,False,357225098256003.0,52,2023-01-01,363.11,76700
+iphone 11 pro max,95,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,353920108555162.0,40,2023-01-01,363.11,147500
+iphone 11,100,True,False,False,256,Red,2019-09-01,False,undamaged,full-set,True,,44,2023-05-01,321.65,117600
+iphone 11,92,False,False,False,256,White,2019-09-01,False,undamaged,full-set,True,,44,2023-05-01,321.65,117600
+iphone 11,92,False,False,False,128,Purple,2019-09-01,False,undamaged,full-set,True,,44,2023-05-01,321.65,115360
+iphone 11,95,False,True,False,64,Red,2019-09-01,False,undamaged,full-set,True,,44,2023-05-01,321.65,95200
+iphone 11,88,False,False,False,64,White,2019-09-01,False,undamaged,full-set,True,,44,2023-05-01,321.65,97440
+iphone 11,99,False,False,False,512,Green,2019-09-01,False,undamaged,full-set,True,,44,2023-05-01,321.65,146720
+iphone 11,96,False,False,False,128,Green,2019-09-01,False,undamaged,full-set,True,,44,2023-05-01,321.65,117600
+iphone 11,96,False,False,False,512,Purple,2019-09-01,False,undamaged,full-set,True,,44,2023-05-01,321.65,142240
+iphone 13,99,False,False,False,128,Midnight,2021-09-01,False,undamaged,full-set,True,,20,2023-05-01,321.65,140000
+iphone 11 pro max,76,True,True,False,512,Midnight Green,2019-09-01,False,undamaged,full-set,True,,44,2023-05-01,321.65,112000
+iphone 12,93,False,False,False,64,Blue,2020-10-01,False,undamaged,full-set,True,,31,2023-05-01,321.65,106400
+iphone 12,78,True,False,False,128,White,2020-10-01,False,undamaged,full-set,True,,31,2023-05-01,321.65,117600
+iphone 12 pro,95,False,False,False,256,Graphite,2020-10-01,False,undamaged,full-set,True,,31,2023-05-01,321.65,145600
+iphone 12 pro max,88,False,True,False,512,Pacific Blue,2020-10-01,False,undamaged,full-set,True,,31,2023-05-01,321.65,179200
+iphone 13,99,False,False,False,128,Starlight,2021-09-01,False,undamaged,full-set,True,,20,2023-05-01,321.65,140000
+iphone 13,87,True,False,False,256,Red,2021-09-01,False,undamaged,full-set,True,,20,2023-05-01,321.65,151200
+iphone 13 pro,86,False,False,False,128,Graphite,2021-09-01,False,undamaged,full-set,True,,20,2023-05-01,321.65,168000
+iphone 11,95,False,False,False,64,Black,2019-09-01,False,undamaged,full-set,True,,44,2023-05-01,321.65,106400
+iphone 13 pro,94,False,False,False,512,Sierra Blue,2021-09-01,False,undamaged,full-set,True,,20,2023-05-01,321.65,201600
+iphone 11 pro,78,True,False,False,256,Gold,2019-09-01,False,undamaged,full-set,True,,44,2023-05-01,321.65,95200
+iphone xs max,98,True,False,True,512,Space Gray,2018-09-01,False,undamaged,full-set,True,,56,2023-05-01,321.65,120960
+iphone se 2,96,False,False,False,256,White,2020-04-01,False,undamaged,full-set,True,,37,2023-05-01,321.65,100800
+iphone xr,94,False,False,False,512,Blue,2018-10-01,False,undamaged,full-set,True,,55,2023-05-01,321.65,129920
+iphone se 3,95,False,True,False,32,Red,2022-03-01,False,undamaged,full-set,True,,14,2023-05-01,321.65,72800
+iphone se 3,88,False,False,False,32,Black,2022-03-01,False,undamaged,full-set,True,,14,2023-05-01,321.65,75040
+iphone se 3,95,False,False,False,32,White,2022-03-01,False,undamaged,full-set,True,,14,2023-05-01,321.65,84000
+iphone 13 pro max,89,False,False,True,128,Gold,2021-09-01,False,undamaged,full-set,True,,20,2023-05-01,321.65,179200
+iphone se 2,99,False,False,False,256,White,2020-04-01,False,undamaged,full-set,True,,37,2023-05-01,321.65,105280
+iphone se 2,100,True,False,False,128,Red,2020-04-01,False,undamaged,full-set,True,,37,2023-05-01,321.65,78400
+iphone se 2,92,False,False,False,128,White,2020-04-01,False,undamaged,full-set,True,,37,2023-05-01,321.65,78400
+iphone se 2,92,False,False,False,64,Black,2020-04-01,False,undamaged,full-set,True,,37,2023-05-01,321.65,76160
+iphone se 2,96,False,False,False,64,Red,2020-04-01,False,undamaged,full-set,True,,37,2023-05-01,321.65,78400
+iphone se 2,95,False,True,False,32,White,2020-04-01,False,undamaged,full-set,True,,37,2023-05-01,321.65,56000
+iphone xs,86,False,True,False,512,Gold,2018-09-01,False,undamaged,full-set,True,,56,2023-05-01,321.65,80640
+iphone se 2,88,False,False,False,32,Black,2020-04-01,False,undamaged,full-set,True,,37,2023-05-01,321.65,58240
+iphone se 3,92,False,False,False,128,White,2022-03-01,False,undamaged,full-set,True,,14,2023-05-01,321.65,95200
+iphone se 3,100,True,False,False,128,Red,2022-03-01,False,undamaged,full-set,True,,14,2023-05-01,321.65,95200
+iphone se 3,99,False,False,False,256,White,2022-03-01,False,undamaged,full-set,True,,14,2023-05-01,321.65,122080
+iphone se 3,96,False,False,False,256,Red,2022-03-01,False,undamaged,full-set,True,,14,2023-05-01,321.65,117600
+iphone 6s,62,True,False,False,32,Space Gray,2015-09-01,False,undamaged,full-set,False,,92,2023-05-01,321.65,20160
+iphone 6s plus,89,False,False,True,32,Rose Gold,2015-09-01,False,undamaged,full-set,False,,92,2023-05-01,321.65,24640
+iphone 7,65,True,True,False,32,Gold,2016-09-01,False,undamaged,full-set,False,,80,2023-05-01,321.65,22400
+iphone 7 plus,96,False,False,False,128,Jet Black,2016-09-01,False,undamaged,full-set,False,,80,2023-05-01,321.65,44800
+iphone 8,84,False,False,False,64,Silver,2017-09-01,False,undamaged,full-set,False,,68,2023-05-01,321.65,50400
+iphone x,98,False,False,False,64,Space Gray,2017-11-01,False,undamaged,full-set,False,,66,2023-05-01,321.65,77280
+iphone se 2,95,False,False,False,32,White,2020-04-01,False,undamaged,full-set,True,,37,2023-05-01,321.65,67200
+iphone 13 pro max,80,True,False,False,512,Graphite,2021-09-01,False,undamaged,full-set,True,,20,2023-05-01,321.65,246400
+iphone se 3,92,False,False,False,64,Black,2022-03-01,False,undamaged,full-set,True,,14,2023-05-01,321.65,92960
+iphone 13 mini,75,True,True,False,256,Pink,2021-09-01,False,undamaged,full-set,True,,20,2023-05-01,321.65,134400
+iphone 14 pro,94,False,False,False,256,Deep Purple,2022-09-01,False,undamaged,full-set,True,,8,2023-05-01,321.65,246400
+iphone 14 pro max,86,False,False,False,512,Space Black,2022-09-01,False,undamaged,full-set,True,,8,2023-05-01,321.65,291200
+iphone se 3,96,False,False,False,64,White,2022-03-01,False,undamaged,full-set,True,,14,2023-05-01,321.65,95200
+iphone 13 mini,96,False,False,False,128,Green,2021-09-01,False,undamaged,full-set,True,,20,2023-05-01,321.65,123200
+iphone 12 pro max,100,False,False,False,256,Gold,2020-10-01,False,undamaged,full-set,False,356728110928856.0,33,2023-07-01,308.83,188160
+iphone 12 pro max,97,False,False,False,256,White,2020-10-01,False,undamaged,full-set,False,354860895226560.0,33,2023-07-01,308.83,188160
+iphone 12 pro max,100,False,False,False,512,Blue,2020-10-01,False,undamaged,full-set,False,356719111915513.0,33,2023-07-01,308.83,199360
+iphone 13,97,False,False,False,128,Green,2021-09-01,False,undamaged,full-set,False,351548605302358.0,22,2023-07-01,308.83,156800
+iphone 13,93,False,False,False,256,White,2021-09-01,False,undamaged,full-set,False,354300906832874.0,22,2023-07-01,308.83,162400
+iphone 7,74,False,False,False,128,Jet Black,2016-09-01,False,undamaged,full-set,False,,82,2023-07-01,308.83,33600
+iphone 7,67,True,False,False,32,Matte Black,2016-09-01,False,undamaged,full-set,False,,82,2023-07-01,308.83,24640
+iphone 7 plus,99,False,False,False,32,Silver,2016-09-01,False,undamaged,full-set,False,,82,2023-07-01,308.83,39200
+iphone 8,89,False,True,False,64,Gold,2017-09-01,False,undamaged,full-set,False,,70,2023-07-01,308.83,53760
+iphone x,96,False,False,False,256,Silver,2017-11-01,False,undamaged,full-set,False,,68,2023-07-01,308.83,67200
+iphone xr,89,False,False,False,128,Yellow,2018-10-01,False,undamaged,phone-only,True,,57,2023-07-01,308.83,78400
+iphone xs,94,False,True,False,512,Gold,2018-09-01,False,undamaged,full-set,True,,58,2023-07-01,308.83,84000
+iphone xs max,95,True,False,False,64,Space Gray,2018-09-01,False,undamaged,full-set,True,,58,2023-07-01,308.83,78400
+iphone 11,92,False,False,False,64,Purple,2019-09-01,False,undamaged,full-set,True,,46,2023-07-01,308.83,95200
+iphone 11 pro,86,False,True,False,128,Midnight Green,2019-09-01,False,undamaged,full-set,True,,46,2023-07-01,308.83,112000
+iphone 11 pro max,96,False,False,False,64,Silver,2019-09-01,False,undamaged,full-set,True,,46,2023-07-01,308.83,106400
+iphone 12,85,True,False,False,128,Green,2020-10-01,False,undamaged,full-set,True,,33,2023-07-01,308.83,112000
+iphone 12 mini,94,False,False,False,64,Blue,2020-11-01,False,undamaged,full-set,True,,32,2023-07-01,308.83,89600
+iphone 8 plus,98,True,False,False,64,Space Gray,2017-09-01,False,undamaged,full-set,False,,70,2023-07-01,308.83,61600
+iphone 12 pro,94,False,False,False,128,Blue,2020-10-01,False,undamaged,full-set,False,354523338019246.0,33,2023-07-01,308.83,140000
+iphone 12 pro,96,False,False,False,128,White,2020-10-01,False,undamaged,full-set,False,356689110214202.0,33,2023-07-01,308.83,140000
+iphone 12 pro,93,False,False,False,128,White,2020-10-01,False,undamaged,full-set,False,358915486779633.0,33,2023-07-01,308.83,140000
+iphone 7 plus,100,True,False,False,128,Black,2016-09-01,False,undamaged,full-set,False,356568085675664.0,82,2023-07-01,308.83,50400
+iphone 7 plus,100,True,False,False,128,Black,2016-09-01,False,undamaged,full-set,False,355834088232650.0,82,2023-07-01,308.83,50400
+iphone 8 plus,100,True,False,False,256,Rose Gold,2017-09-01,False,undamaged,full-set,False,356733082293727.0,70,2023-07-01,308.83,64960
+iphone 8 plus,100,True,False,False,256,Black,2017-09-01,False,undamaged,full-set,False,356733085212468.0,70,2023-07-01,308.83,64960
+iphone x,100,True,False,False,64,White,2017-11-01,False,undamaged,full-set,False,354866091999538.0,68,2023-07-01,308.83,61600
+iphone x,100,True,False,False,256,Black,2017-11-01,False,undamaged,phone-only,False,353020090161549.0,68,2023-07-01,308.83,70560
+iphone x,100,True,False,False,256,White,2017-11-01,False,undamaged,full-set,False,354862096007518.0,68,2023-07-01,308.83,72800
+iphone xs,100,True,False,False,256,Black,2018-09-01,False,undamaged,full-set,False,357235094112308.0,58,2023-07-01,308.83,88480
+iphone xs,100,True,False,False,64,Gold,2018-09-01,False,undamaged,full-set,False,357228095332785.0,58,2023-07-01,308.83,72800
+iphone xs,100,True,False,False,64,Black,2018-09-01,False,undamaged,full-set,False,357225098256003.0,58,2023-07-01,308.83,72800
+iphone xs,94,False,False,False,128,Black,2018-09-01,False,undamaged,full-set,False,,58,2023-07-01,308.83,84000
+iphone xs max,94,False,False,False,256,Black,2018-09-01,False,undamaged,full-set,False,357274091766014.0,58,2023-07-01,308.83,98560
+iphone 11,95,False,False,False,128,Black,2019-09-01,False,undamaged,full-set,False,356555102295659.0,46,2023-07-01,308.83,100800
+iphone 11,93,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,356327107225548.0,46,2023-07-01,308.83,112000
+iphone 11,95,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,353980102889868.0,46,2023-07-01,308.83,112000
+iphone 11 pro,99,False,False,False,256,Red,2019-09-01,False,undamaged,full-set,False,353246109357022.0,46,2023-07-01,308.83,128800
+iphone 12 pro,96,False,False,False,256,Blue,2020-10-01,False,undamaged,full-set,False,356961134900102.0,33,2023-07-01,308.83,151200
+iphone 12 pro,96,False,False,False,256,White,2020-10-01,False,undamaged,full-set,False,356685112918378.0,33,2023-07-01,308.83,151200
+iphone 12 pro,95,False,False,False,128,Blue,2020-10-01,False,undamaged,full-set,False,350320090319912.0,33,2023-07-01,308.83,140000
+iphone 12 pro,92,False,False,False,128,White,2020-10-01,False,undamaged,full-set,False,356690113166100.0,33,2023-07-01,308.83,140000
+iphone 11 pro max,93,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,353920108555162.0,46,2023-07-01,308.83,140000
+iphone 7 plus,100,True,False,False,128,Black,2016-09-01,False,undamaged,full-set,False,355834088232650.0,82,2023-07-01,308.83,53760
+iphone 13 pro max,87,False,False,True,128,Gold,2021-09-01,False,undamaged,full-set,True,,26,2023-11-01,327.6173,169600
+iphone xr,92,False,False,False,512,Blue,2018-10-01,False,undamaged,full-set,True,,61,2023-11-01,327.6173,122960
+iphone xs,84,False,True,False,512,Gold,2018-09-01,False,undamaged,full-set,True,,62,2023-11-01,327.6173,76320
+iphone xs max,98,True,False,True,512,Space Gray,2018-09-01,False,undamaged,full-set,True,,62,2023-11-01,327.6173,114480
+iphone 11,93,False,False,False,64,Black,2019-09-01,False,undamaged,full-set,True,,50,2023-11-01,327.6173,100700
+iphone 11,86,False,False,False,64,White,2019-09-01,False,undamaged,full-set,True,,50,2023-11-01,327.6173,92220
+iphone 11,93,False,True,False,64,Red,2019-09-01,False,undamaged,full-set,True,,50,2023-11-01,327.6173,90100
+iphone 11,94,False,False,False,128,Green,2019-09-01,False,undamaged,full-set,True,,50,2023-11-01,327.6173,111300
+iphone 11,90,False,False,False,128,Purple,2019-09-01,False,undamaged,full-set,True,,50,2023-11-01,327.6173,109180
+iphone 11,90,False,False,False,256,White,2019-09-01,False,undamaged,full-set,True,,50,2023-11-01,327.6173,111300
+iphone x,96,False,False,False,64,Space Gray,2017-11-01,False,undamaged,full-set,False,,72,2023-11-01,327.6173,73140
+iphone 11,100,True,False,False,256,Red,2019-09-01,False,undamaged,full-set,True,,50,2023-11-01,327.6173,111300
+iphone 11,94,False,False,False,512,Purple,2019-09-01,False,undamaged,full-set,True,,50,2023-11-01,327.6173,134620
+iphone 11 pro,78,True,False,False,256,Gold,2019-09-01,False,undamaged,full-set,True,,50,2023-11-01,327.6173,90100
+iphone 11 pro max,76,True,True,False,512,Midnight Green,2019-09-01,False,undamaged,full-set,True,,50,2023-11-01,327.6173,106000
+iphone 12,78,True,False,False,128,White,2020-10-01,False,undamaged,full-set,True,,37,2023-11-01,327.6173,111300
+iphone 12 pro,93,False,False,False,256,Graphite,2020-10-01,False,undamaged,full-set,True,,37,2023-11-01,327.6173,137800
+iphone 12 pro max,86,False,True,False,512,Pacific Blue,2020-10-01,False,undamaged,full-set,True,,37,2023-11-01,327.6173,169600
+iphone 13,97,False,False,False,128,Starlight,2021-09-01,False,undamaged,full-set,True,,26,2023-11-01,327.6173,132500
+iphone 13,97,False,False,False,128,Midnight,2021-09-01,False,undamaged,full-set,True,,26,2023-11-01,327.6173,132500
+iphone 13,87,True,False,False,256,Red,2021-09-01,False,undamaged,full-set,True,,26,2023-11-01,327.6173,143100
+iphone 11,97,False,False,False,512,Green,2019-09-01,False,undamaged,full-set,True,,50,2023-11-01,327.6173,138860
+iphone 13 pro,84,False,False,False,128,Graphite,2021-09-01,False,undamaged,full-set,True,,26,2023-11-01,327.6173,159000
+iphone 8,82,False,False,False,64,Silver,2017-09-01,False,undamaged,full-set,False,,74,2023-11-01,327.6173,47700
+iphone 7,65,True,True,False,32,Gold,2016-09-01,False,undamaged,full-set,False,,86,2023-11-01,327.6173,21200
+iphone se 2,93,False,False,False,32,White,2020-04-01,False,undamaged,full-set,True,,43,2023-11-01,327.6173,63600
+iphone se 2,86,False,False,False,32,Black,2020-04-01,False,undamaged,full-set,True,,43,2023-11-01,327.6173,55120
+iphone se 2,93,False,True,False,32,White,2020-04-01,False,undamaged,full-set,True,,43,2023-11-01,327.6173,53000
+iphone se 2,94,False,False,False,64,Red,2020-04-01,False,undamaged,full-set,True,,43,2023-11-01,327.6173,74200
+iphone se 2,90,False,False,False,64,Black,2020-04-01,False,undamaged,full-set,True,,43,2023-11-01,327.6173,72080
+iphone se 2,90,False,False,False,128,White,2020-04-01,False,undamaged,full-set,True,,43,2023-11-01,327.6173,74200
+iphone se 2,100,True,False,False,128,Red,2020-04-01,False,undamaged,full-set,True,,43,2023-11-01,327.6173,74200
+iphone se 2,97,False,False,False,256,White,2020-04-01,False,undamaged,full-set,True,,43,2023-11-01,327.6173,99640
+iphone se 2,94,False,False,False,256,White,2020-04-01,False,undamaged,full-set,True,,43,2023-11-01,327.6173,95400
+iphone 7 plus,94,False,False,False,128,Jet Black,2016-09-01,False,undamaged,full-set,False,,86,2023-11-01,327.6173,42400
+iphone se 3,93,False,False,False,32,White,2022-03-01,False,undamaged,full-set,True,,20,2023-11-01,327.6173,79500
+iphone se 3,93,False,True,False,32,Red,2022-03-01,False,undamaged,full-set,True,,20,2023-11-01,327.6173,68900
+iphone se 3,94,False,False,False,64,White,2022-03-01,False,undamaged,full-set,True,,20,2023-11-01,327.6173,90100
+iphone se 3,90,False,False,False,64,Black,2022-03-01,False,undamaged,full-set,True,,20,2023-11-01,327.6173,87980
+iphone se 3,90,False,False,False,128,White,2022-03-01,False,undamaged,full-set,True,,20,2023-11-01,327.6173,90100
+iphone se 3,100,True,False,False,128,Red,2022-03-01,False,undamaged,full-set,True,,20,2023-11-01,327.6173,90100
+iphone se 3,97,False,False,False,256,White,2022-03-01,False,undamaged,full-set,True,,20,2023-11-01,327.6173,115540
+iphone se 3,94,False,False,False,256,Red,2022-03-01,False,undamaged,full-set,True,,20,2023-11-01,327.6173,111300
+iphone 6s,62,True,False,False,32,Space Gray,2015-09-01,False,undamaged,full-set,False,,98,2023-11-01,327.6173,19080
+iphone 6s plus,87,False,False,True,32,Rose Gold,2015-09-01,False,undamaged,full-set,False,,98,2023-11-01,327.6173,23320
+iphone se 3,86,False,False,False,32,Black,2022-03-01,False,undamaged,full-set,True,,20,2023-11-01,327.6173,71020
+iphone 13 pro,92,False,False,False,512,Sierra Blue,2021-09-01,False,undamaged,full-set,True,,26,2023-11-01,327.6173,190800
+iphone 12,91,False,False,False,64,Blue,2020-10-01,False,undamaged,full-set,True,,37,2023-11-01,327.6173,100700
+iphone 13 pro max,80,True,False,False,512,Graphite,2021-09-01,False,undamaged,full-set,True,,26,2023-11-01,327.6173,233200
+iphone 13 mini,94,False,False,False,128,Green,2021-09-01,False,undamaged,full-set,True,,26,2023-11-01,327.6173,116600
+iphone 13 mini,75,True,True,False,256,Pink,2021-09-01,False,undamaged,full-set,True,,26,2023-11-01,327.6173,127200
+iphone 14 pro,92,False,False,False,256,Deep Purple,2022-09-01,False,undamaged,full-set,True,,14,2023-11-01,327.6173,233200
+iphone 14 pro max,84,False,False,False,512,Space Black,2022-09-01,False,undamaged,full-set,True,,14,2023-11-01,327.6173,275600
+iphone 15,100,False,False,False,128,Blue,2023-09-01,False,undamaged,full-set,True,,2,2023-11-01,327.6173,265000
+iphone 15 pro,97,False,False,False,256,Titanium,2023-09-01,False,undamaged,full-set,True,,2,2023-11-01,327.6173,318000
+iphone 15 pro max,94,False,False,False,512,Titanium,2023-09-01,False,undamaged,full-set,True,,2,2023-11-01,327.6173,424000
+iphone 12 pro,91,False,False,False,128,White,2020-10-01,False,undamaged,full-set,False,358915486779633.0,39,2024-01-01,323.9902,132500
+iphone 12 pro,94,False,False,False,128,White,2020-10-01,False,undamaged,full-set,False,356689110214202.0,39,2024-01-01,323.9902,132500
+iphone 12 pro,90,False,False,False,128,White,2020-10-01,False,undamaged,full-set,False,356690113166100.0,39,2024-01-01,323.9902,132500
+iphone 12 pro,92,False,False,False,128,Blue,2020-10-01,False,undamaged,full-set,False,354523338019246.0,39,2024-01-01,323.9902,132500
+iphone 12 pro max,98,False,False,False,256,Gold,2020-10-01,False,undamaged,full-set,False,356728110928856.0,39,2024-01-01,323.9902,178080
+iphone 12 pro max,95,False,False,False,256,White,2020-10-01,False,undamaged,full-set,False,354860895226560.0,39,2024-01-01,323.9902,178080
+iphone 12 pro max,98,False,False,False,512,Blue,2020-10-01,False,undamaged,full-set,False,356719111915513.0,39,2024-01-01,323.9902,188680
+iphone 13,95,False,False,False,256,Blue,2021-09-01,False,undamaged,full-set,False,351548605302358.0,28,2024-01-01,323.9902,159000
+iphone 7 plus,97,False,False,False,32,Silver,2016-09-01,False,undamaged,full-set,False,,88,2024-01-01,323.9902,37100
+iphone 7,72,False,False,False,128,Jet Black,2016-09-01,False,undamaged,full-set,False,,88,2024-01-01,323.9902,31800
+iphone 7,67,True,False,False,32,Matte Black,2016-09-01,False,undamaged,full-set,False,,88,2024-01-01,323.9902,23320
+iphone 12 pro,93,False,False,False,128,Blue,2020-10-01,False,undamaged,full-set,False,350320090319912.0,39,2024-01-01,323.9902,132500
+iphone 8,87,False,True,False,64,Gold,2017-09-01,False,undamaged,full-set,False,,76,2024-01-01,323.9902,50880
+iphone 8 plus,98,True,False,False,64,Space Gray,2017-09-01,False,undamaged,full-set,False,,76,2024-01-01,323.9902,58300
+iphone x,94,False,False,False,256,Silver,2017-11-01,False,undamaged,full-set,False,,74,2024-01-01,323.9902,63600
+iphone xr,87,False,False,False,128,Yellow,2018-10-01,False,undamaged,phone-only,True,,63,2024-01-01,323.9902,74200
+iphone xs,92,False,True,False,512,Gold,2018-09-01,False,undamaged,full-set,True,,64,2024-01-01,323.9902,79500
+iphone 13,91,False,False,False,256,White,2021-09-01,False,undamaged,full-set,False,354300906832874.0,28,2024-01-01,323.9902,153700
+iphone 12 pro,94,False,False,False,256,White,2020-10-01,False,undamaged,full-set,False,356685112918378.0,39,2024-01-01,323.9902,143100
+iphone 11,93,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,353980102889868.0,52,2024-01-01,323.9902,106000
+iphone 11 pro max,91,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,353920108555162.0,52,2024-01-01,323.9902,132500
+iphone 7 plus,100,True,False,False,128,Black,2016-09-01,False,undamaged,full-set,False,356568085675664.0,88,2024-01-01,323.9902,47700
+iphone 7 plus,100,True,False,False,128,Black,2016-09-01,False,undamaged,full-set,False,355834088232650.0,88,2024-01-01,323.9902,47700
+iphone 7 plus,100,True,False,False,128,Black,2016-09-01,False,undamaged,full-set,False,355834088232650.0,88,2024-01-01,323.9902,50880
+iphone 8 plus,100,True,False,False,256,Rose Gold,2017-09-01,False,undamaged,full-set,False,356733082293727.0,76,2024-01-01,323.9902,61480
+iphone 8 plus,100,True,False,False,256,Black,2017-09-01,False,undamaged,full-set,False,356733085212468.0,76,2024-01-01,323.9902,61480
+iphone x,100,True,False,False,64,White,2017-11-01,False,undamaged,full-set,False,354866091999538.0,74,2024-01-01,323.9902,58300
+iphone x,100,True,False,False,256,Black,2017-11-01,False,undamaged,phone-only,False,353020090161549.0,74,2024-01-01,323.9902,66780
+iphone x,100,True,False,False,256,White,2017-11-01,False,undamaged,full-set,False,354862096007518.0,74,2024-01-01,323.9902,68900
+iphone xs,100,True,False,False,256,Black,2018-09-01,False,undamaged,full-set,False,357235094112308.0,64,2024-01-01,323.9902,83740
+iphone xs,100,True,False,False,64,Gold,2018-09-01,False,undamaged,full-set,False,357228095332785.0,64,2024-01-01,323.9902,68900
+iphone xs,100,True,False,False,64,Black,2018-09-01,False,undamaged,full-set,False,357225098256003.0,64,2024-01-01,323.9902,68900
+iphone xs,92,False,False,False,128,Black,2018-09-01,False,undamaged,full-set,False,,64,2024-01-01,323.9902,79500
+iphone xs max,90,False,False,False,256,Black,2018-09-01,False,undamaged,full-set,False,357274091766014.0,64,2024-01-01,323.9902,93280
+iphone 11,93,False,False,False,128,Black,2019-09-01,False,undamaged,full-set,False,356555102295659.0,52,2024-01-01,323.9902,95400
+iphone 11,91,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,356327107225548.0,52,2024-01-01,323.9902,106000
+iphone 11,90,False,False,False,64,Purple,2019-09-01,False,undamaged,full-set,True,,52,2024-01-01,323.9902,90100
+iphone 11 pro,97,False,False,False,256,Red,2019-09-01,False,undamaged,full-set,False,353246109357022.0,52,2024-01-01,323.9902,121900
+iphone 12 pro,94,False,False,False,256,Blue,2020-10-01,False,undamaged,full-set,False,356961134900102.0,39,2024-01-01,323.9902,143100
+iphone xs max,95,True,False,False,64,Space Gray,2018-09-01,False,undamaged,full-set,True,,64,2024-01-01,323.9902,74200
+iphone se 2,91,False,False,False,32,White,2020-04-01,False,undamaged,full-set,True,,49,2024-05-01,296.8561,60000
+iphone se 3,92,False,False,False,256,Red,2022-03-01,False,undamaged,full-set,True,,26,2024-05-01,296.8561,105000
+iphone 11,88,False,False,False,128,Purple,2019-09-01,False,undamaged,full-set,True,,56,2024-05-01,296.8561,103000
+iphone 11,100,True,False,False,256,Red,2019-09-01,False,undamaged,full-set,True,,56,2024-05-01,296.8561,105000
+iphone 11,95,False,False,False,512,Green,2019-09-01,False,undamaged,full-set,True,,56,2024-05-01,296.8561,131000
+iphone 11,92,False,False,False,512,Purple,2019-09-01,False,undamaged,full-set,True,,56,2024-05-01,296.8561,127000
+iphone 11 pro,78,True,False,False,256,Gold,2019-09-01,False,undamaged,full-set,True,,56,2024-05-01,296.8561,85000
+iphone 11 pro max,76,True,True,False,512,Midnight Green,2019-09-01,False,undamaged,full-set,True,,56,2024-05-01,296.8561,100000
+iphone 12,89,False,False,False,64,Blue,2020-10-01,False,undamaged,full-set,True,,43,2024-05-01,296.8561,95000
+iphone 12,78,True,False,False,128,White,2020-10-01,False,undamaged,full-set,True,,43,2024-05-01,296.8561,105000
+iphone 12 pro,91,False,False,False,256,Graphite,2020-10-01,False,undamaged,full-set,True,,43,2024-05-01,296.8561,130000
+iphone 12 pro max,84,False,True,False,512,Pacific Blue,2020-10-01,False,undamaged,full-set,True,,43,2024-05-01,296.8561,160000
+iphone 13,95,False,False,False,128,Starlight,2021-09-01,False,undamaged,full-set,True,,32,2024-05-01,296.8561,125000
+iphone 11,92,False,False,False,128,Green,2019-09-01,False,undamaged,full-set,True,,56,2024-05-01,296.8561,105000
+iphone 13,95,False,False,False,128,Midnight,2021-09-01,False,undamaged,full-set,True,,32,2024-05-01,296.8561,125000
+iphone 13 pro,82,False,False,False,128,Graphite,2021-09-01,False,undamaged,full-set,True,,32,2024-05-01,296.8561,150000
+iphone 13 pro,90,False,False,False,512,Sierra Blue,2021-09-01,False,undamaged,full-set,True,,32,2024-05-01,296.8561,180000
+iphone 13 pro max,85,False,False,True,128,Gold,2021-09-01,False,undamaged,full-set,True,,32,2024-05-01,296.8561,160000
+iphone 13 pro max,80,True,False,False,512,Graphite,2021-09-01,False,undamaged,full-set,True,,32,2024-05-01,296.8561,220000
+iphone 13 mini,92,False,False,False,128,Green,2021-09-01,False,undamaged,full-set,True,,32,2024-05-01,296.8561,110000
+iphone 13 mini,75,True,True,False,256,Pink,2021-09-01,False,undamaged,full-set,True,,32,2024-05-01,296.8561,120000
+iphone 14 pro,90,False,False,False,256,Deep Purple,2022-09-01,False,undamaged,full-set,True,,20,2024-05-01,296.8561,220000
+iphone 14 pro max,82,False,False,False,512,Space Black,2022-09-01,False,undamaged,full-set,True,,20,2024-05-01,296.8561,260000
+iphone 15,98,False,False,False,128,Blue,2023-09-01,False,undamaged,full-set,True,,8,2024-05-01,296.8561,250000
+iphone 15 pro,95,False,False,False,256,Titanium,2023-09-01,False,undamaged,full-set,True,,8,2024-05-01,296.8561,300000
+iphone 15 pro max,92,False,False,False,512,Titanium,2023-09-01,False,undamaged,full-set,True,,8,2024-05-01,296.8561,400000
+iphone 13,87,True,False,False,256,Red,2021-09-01,False,undamaged,full-set,True,,32,2024-05-01,296.8561,135000
+iphone 11,91,False,True,False,64,Red,2019-09-01,False,undamaged,full-set,True,,56,2024-05-01,296.8561,85000
+iphone 11,88,False,False,False,256,White,2019-09-01,False,undamaged,full-set,True,,56,2024-05-01,296.8561,105000
+iphone 11,91,False,False,False,64,Black,2019-09-01,False,undamaged,full-set,True,,56,2024-05-01,296.8561,95000
+iphone se 2,84,False,False,False,32,Black,2020-04-01,False,undamaged,full-set,True,,49,2024-05-01,296.8561,52000
+iphone se 2,91,False,True,False,32,White,2020-04-01,False,undamaged,full-set,True,,49,2024-05-01,296.8561,50000
+iphone se 2,92,False,False,False,64,Red,2020-04-01,False,undamaged,full-set,True,,49,2024-05-01,296.8561,70000
+iphone se 2,88,False,False,False,64,Black,2020-04-01,False,undamaged,full-set,True,,49,2024-05-01,296.8561,68000
+iphone se 2,88,False,False,False,128,White,2020-04-01,False,undamaged,full-set,True,,49,2024-05-01,296.8561,70000
+iphone se 2,100,True,False,False,128,Red,2020-04-01,False,undamaged,full-set,True,,49,2024-05-01,296.8561,70000
+iphone se 2,95,False,False,False,256,White,2020-04-01,False,undamaged,full-set,True,,49,2024-05-01,296.8561,94000
+iphone se 2,92,False,False,False,256,White,2020-04-01,False,undamaged,full-set,True,,49,2024-05-01,296.8561,90000
+iphone se 3,91,False,False,False,32,White,2022-03-01,False,undamaged,full-set,True,,26,2024-05-01,296.8561,75000
+iphone 11,84,False,False,False,64,White,2019-09-01,False,undamaged,full-set,True,,56,2024-05-01,296.8561,87000
+iphone se 3,91,False,True,False,32,Red,2022-03-01,False,undamaged,full-set,True,,26,2024-05-01,296.8561,65000
+iphone se 3,92,False,False,False,64,White,2022-03-01,False,undamaged,full-set,True,,26,2024-05-01,296.8561,85000
+iphone se 3,88,False,False,False,64,Black,2022-03-01,False,undamaged,full-set,True,,26,2024-05-01,296.8561,83000
+iphone se 3,84,False,False,False,32,Black,2022-03-01,False,undamaged,full-set,True,,26,2024-05-01,296.8561,67000
+iphone se 3,100,True,False,False,128,Red,2022-03-01,False,undamaged,full-set,True,,26,2024-05-01,296.8561,85000
+iphone xs max,98,True,False,True,512,Space Gray,2018-09-01,False,undamaged,full-set,True,,68,2024-05-01,296.8561,108000
+iphone se 3,88,False,False,False,128,White,2022-03-01,False,undamaged,full-set,True,,26,2024-05-01,296.8561,85000
+iphone xr,90,False,False,False,512,Blue,2018-10-01,False,undamaged,full-set,True,,67,2024-05-01,296.8561,116000
+iphone x,94,False,False,False,64,Space Gray,2017-11-01,False,undamaged,full-set,False,,78,2024-05-01,296.8561,69000
+iphone 8,80,False,False,False,64,Silver,2017-09-01,False,undamaged,full-set,False,,80,2024-05-01,296.8561,45000
+iphone xs,82,False,True,False,512,Gold,2018-09-01,False,undamaged,full-set,True,,68,2024-05-01,296.8561,72000
+iphone 7,65,True,True,False,32,Gold,2016-09-01,False,undamaged,full-set,False,,92,2024-05-01,296.8561,20000
+iphone 6s plus,85,False,False,True,32,Rose Gold,2015-09-01,False,undamaged,full-set,False,,104,2024-05-01,296.8561,22000
+iphone 6s,62,True,False,False,32,Space Gray,2015-09-01,False,undamaged,full-set,False,,104,2024-05-01,296.8561,18000
+iphone se 3,95,False,False,False,256,White,2022-03-01,False,undamaged,full-set,True,,26,2024-05-01,296.8561,109000
+iphone 7 plus,92,False,False,False,128,Jet Black,2016-09-01,False,undamaged,full-set,False,,92,2024-05-01,296.8561,40000
+iphone x,100,True,False,False,256,White,2017-11-01,False,undamaged,full-set,False,354862096007518.0,80,2024-07-01,306.0182,65000
+iphone 7 plus,100,True,False,False,128,Black,2016-09-01,False,undamaged,full-set,False,356568085675664.0,94,2024-07-01,306.0182,45000
+iphone 7 plus,100,True,False,False,128,Black,2016-09-01,False,undamaged,full-set,False,355834088232650.0,94,2024-07-01,306.0182,45000
+iphone 7 plus,100,True,False,False,128,Black,2016-09-01,False,undamaged,full-set,False,355834088232650.0,94,2024-07-01,306.0182,48000
+iphone 8 plus,100,True,False,False,256,Rose Gold,2017-09-01,False,undamaged,full-set,False,356733082293727.0,82,2024-07-01,306.0182,58000
+iphone 8 plus,100,True,False,False,256,Black,2017-09-01,False,undamaged,full-set,False,356733085212468.0,82,2024-07-01,306.0182,58000
+iphone x,100,True,False,False,64,White,2017-11-01,False,undamaged,full-set,False,354866091999538.0,80,2024-07-01,306.0182,55000
+iphone x,100,True,False,False,256,Black,2017-11-01,False,undamaged,phone-only,False,353020090161549.0,80,2024-07-01,306.0182,63000
+iphone xs,100,True,False,False,256,Black,2018-09-01,False,undamaged,full-set,False,357235094112308.0,70,2024-07-01,306.0182,79000
+iphone 15 pro max,91,True,False,False,256,Titanium,2023-09-01,False,undamaged,full-set,True,,10,2024-07-01,306.0182,350000
+iphone xs,100,True,False,False,64,Black,2018-09-01,False,undamaged,full-set,False,357225098256003.0,70,2024-07-01,306.0182,65000
+iphone 11 pro,82,False,True,False,128,Midnight Green,2019-09-01,False,undamaged,full-set,True,,58,2024-07-01,306.0182,100000
+iphone 11 pro max,92,False,False,False,64,Silver,2019-09-01,False,undamaged,full-set,True,,58,2024-07-01,306.0182,95000
+iphone 12,85,True,False,False,128,Green,2020-10-01,False,undamaged,full-set,True,,45,2024-07-01,306.0182,100000
+iphone 12 mini,90,False,False,False,64,Blue,2020-11-01,False,undamaged,full-set,True,,44,2024-07-01,306.0182,80000
+iphone 12 pro,87,False,True,False,128,Graphite,2020-10-01,False,undamaged,full-set,True,,45,2024-07-01,306.0182,120000
+iphone 12 pro max,94,True,False,False,256,Pacific Blue,2020-10-01,False,undamaged,full-set,True,,45,2024-07-01,306.0182,155000
+iphone 13,92,False,False,False,128,Pink,2021-09-01,False,undamaged,full-set,True,,34,2024-07-01,306.0182,120000
+iphone 13 mini,85,False,True,False,64,Red,2021-09-01,False,undamaged,full-set,True,,34,2024-07-01,306.0182,95000
+iphone 13 pro,88,False,False,False,256,Silver,2021-09-01,False,undamaged,full-set,True,,34,2024-07-01,306.0182,170000
+iphone 13 pro max,90,True,False,False,128,Gold,2021-09-01,False,undamaged,full-set,True,,34,2024-07-01,306.0182,155000
+iphone 14,95,False,False,False,128,Midnight,2022-09-01,False,undamaged,full-set,True,,22,2024-07-01,306.0182,160000
+iphone 14 pro,87,False,False,False,128,Deep Purple,2022-09-01,False,undamaged,full-set,True,,22,2024-07-01,306.0182,205000
+iphone 14 pro max,93,True,False,False,256,Space Black,2022-09-01,False,undamaged,full-set,True,,22,2024-07-01,306.0182,240000
+iphone 11,88,False,False,False,64,Purple,2019-09-01,False,undamaged,full-set,True,,58,2024-07-01,306.0182,85000
+iphone 12,87,False,False,False,64,Green,2020-10-01,False,undamaged,full-set,True,,45,2024-07-01,306.0182,98000
+iphone 12 pro,90,True,False,False,256,Pacific Blue,2020-10-01,False,undamaged,full-set,True,,45,2024-07-01,306.0182,140000
+iphone 12 pro max,85,False,False,False,128,Graphite,2020-10-01,False,undamaged,full-set,True,,45,2024-07-01,306.0182,130000
+iphone 13,93,False,False,False,256,Blue,2021-09-01,False,undamaged,full-set,True,,34,2024-07-01,306.0182,150000
+iphone 13 mini,88,False,True,False,128,Pink,2021-09-01,False,undamaged,full-set,True,,34,2024-07-01,306.0182,115000
+iphone 13 pro,91,True,False,False,128,Silver,2021-09-01,False,undamaged,full-set,True,,34,2024-07-01,306.0182,145000
+iphone 13 pro max,86,False,False,False,512,Gold,2021-09-01,False,undamaged,full-set,True,,34,2024-07-01,306.0182,210000
+iphone 14,94,False,False,False,256,Midnight,2022-09-01,False,undamaged,full-set,True,,22,2024-07-01,306.0182,175000
+iphone 14 plus,90,False,True,False,128,Starlight,2022-10-01,False,undamaged,full-set,True,,21,2024-07-01,306.0182,150000
+iphone 14 pro,85,False,False,False,256,Deep Purple,2022-09-01,False,undamaged,full-set,True,,22,2024-07-01,306.0182,215000
+iphone 14 pro max,92,True,False,False,128,Space Black,2022-09-01,False,undamaged,full-set,True,,22,2024-07-01,306.0182,230000
+iphone 15,97,False,False,False,256,Blue,2023-09-01,False,undamaged,full-set,True,,10,2024-07-01,306.0182,260000
+iphone 15 pro,94,False,True,False,128,Titanium,2023-09-01,False,undamaged,full-set,True,,10,2024-07-01,306.0182,270000
+iphone xs,100,True,False,False,64,Gold,2018-09-01,False,undamaged,full-set,False,357228095332785.0,70,2024-07-01,306.0182,65000
+iphone 12 mini,92,False,True,False,128,Red,2020-11-01,False,undamaged,full-set,True,,44,2024-07-01,306.0182,105000
+iphone xs max,95,True,False,False,64,Space Gray,2018-09-01,False,undamaged,full-set,True,,70,2024-07-01,306.0182,70000
+iphone 14 plus,92,False,True,False,256,Starlight,2022-10-01,False,undamaged,full-set,True,,21,2024-07-01,306.0182,180000
+iphone xr,85,False,False,False,128,Yellow,2018-10-01,False,undamaged,phone-only,True,,69,2024-07-01,306.0182,70000
+iphone xs,90,False,False,False,128,Black,2018-09-01,False,undamaged,full-set,False,,70,2024-07-01,306.0182,75000
+iphone xs max,88,False,False,False,256,Black,2018-09-01,False,undamaged,full-set,False,357274091766014.0,70,2024-07-01,306.0182,88000
+iphone xs,90,False,True,False,512,Gold,2018-09-01,False,undamaged,full-set,True,,70,2024-07-01,306.0182,75000
+iphone 11,89,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,356327107225548.0,58,2024-07-01,306.0182,100000
+iphone 11,91,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,353980102889868.0,58,2024-07-01,306.0182,100000
+iphone 11 pro,95,False,False,False,256,Red,2019-09-01,False,undamaged,full-set,False,353246109357022.0,58,2024-07-01,306.0182,115000
+iphone 11 pro max,89,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,353920108555162.0,58,2024-07-01,306.0182,125000
+iphone 12 pro,92,False,False,False,256,Blue,2020-10-01,False,undamaged,full-set,False,356961134900102.0,45,2024-07-01,306.0182,135000
+iphone 12 pro,92,False,False,False,256,White,2020-10-01,False,undamaged,full-set,False,356685112918378.0,45,2024-07-01,306.0182,135000
+iphone 12 pro,91,False,False,False,128,Blue,2020-10-01,False,undamaged,full-set,False,350320090319912.0,45,2024-07-01,306.0182,125000
+iphone 11 pro max,89,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,353920108555162.0,58,2024-07-01,306.0182,125000
+iphone 12 pro,92,False,False,False,256,Blue,2020-10-01,False,undamaged,full-set,False,356961134900102.0,45,2024-07-01,306.0182,135000
+iphone 12 pro,92,False,False,False,256,White,2020-10-01,False,undamaged,full-set,False,356685112918378.0,45,2024-07-01,306.0182,135000
+iphone 12 pro,91,False,False,False,128,Blue,2020-10-01,False,undamaged,full-set,False,350320090319912.0,45,2024-07-01,306.0182,125000
+iphone 12 pro,89,False,False,False,128,White,2020-10-01,False,undamaged,full-set,False,358915486779633.0,45,2024-07-01,306.0182,125000
+iphone 11,91,False,False,False,128,Black,2019-09-01,False,undamaged,full-set,False,356555102295659.0,58,2024-07-01,306.0182,90000
+iphone 12 pro,88,False,False,False,128,White,2020-10-01,False,undamaged,full-set,False,356690113166100.0,45,2024-07-01,306.0182,125000
+iphone x,92,False,False,False,256,Silver,2017-11-01,False,undamaged,full-set,False,,80,2024-07-01,306.0182,60000
+iphone 12 pro,92,False,False,False,128,White,2020-10-01,False,undamaged,full-set,False,356689110214202.0,45,2024-07-01,306.0182,125000
+iphone 8 plus,98,True,False,False,64,Space Gray,2017-09-01,False,undamaged,full-set,False,,82,2024-07-01,306.0182,55000
+iphone 7 plus,95,False,False,False,32,Silver,2016-09-01,False,undamaged,full-set,False,,94,2024-07-01,306.0182,35000
+iphone 7,67,True,False,False,32,Matte Black,2016-09-01,False,undamaged,full-set,False,,94,2024-07-01,306.0182,22000
+iphone 7,70,False,False,False,128,Jet Black,2016-09-01,False,undamaged,full-set,False,,94,2024-07-01,306.0182,30000
+iphone 13,89,False,False,False,256,White,2021-09-01,False,undamaged,full-set,False,354300906832874.0,34,2024-07-01,306.0182,145000
+iphone 8,85,False,True,False,64,Gold,2017-09-01,False,undamaged,full-set,False,,82,2024-07-01,306.0182,48000
+iphone 12 pro max,96,False,False,False,512,Blue,2020-10-01,False,undamaged,full-set,False,356719111915513.0,45,2024-07-01,306.0182,178000
+iphone 12 pro max,93,False,False,False,256,White,2020-10-01,False,undamaged,full-set,False,354860895226560.0,45,2024-07-01,306.0182,168000
+iphone 12 pro max,96,False,False,False,256,Gold,2020-10-01,False,undamaged,full-set,False,356728110928856.0,45,2024-07-01,306.0182,168000
+iphone 12 pro,90,False,False,False,128,Blue,2020-10-01,False,undamaged,full-set,False,354523338019246.0,45,2024-07-01,306.0182,125000
+iphone 13,93,False,False,False,128,Green,2021-09-01,False,undamaged,full-set,False,351548605302358.0,34,2024-07-01,306.0182,140000
+iphone 12,78,True,False,False,128,White,2020-10-01,False,undamaged,full-set,True,,49,2024-11-01,293.4102,98700
+iphone 11,90,False,False,False,128,Green,2019-09-01,False,undamaged,full-set,True,,62,2024-11-01,293.4102,98700
+iphone 12,87,False,False,False,64,Blue,2020-10-01,False,undamaged,full-set,True,,49,2024-11-01,293.4102,89300
+iphone 11,86,False,False,False,128,Purple,2019-09-01,False,undamaged,full-set,True,,62,2024-11-01,293.4102,96820
+iphone 11 pro max,76,True,True,False,512,Midnight Green,2019-09-01,False,undamaged,full-set,True,,62,2024-11-01,293.4102,94000
+iphone 11,90,False,False,False,512,Purple,2019-09-01,False,undamaged,full-set,True,,62,2024-11-01,293.4102,119380
+iphone 11,93,False,False,False,512,Green,2019-09-01,False,undamaged,full-set,True,,62,2024-11-01,293.4102,123140
+iphone 11,100,True,False,False,256,Red,2019-09-01,False,undamaged,full-set,True,,62,2024-11-01,293.4102,98700
+iphone 11,86,False,False,False,256,White,2019-09-01,False,undamaged,full-set,True,,62,2024-11-01,293.4102,98700
+iphone 12 pro,89,False,False,False,256,Graphite,2020-10-01,False,undamaged,full-set,True,,49,2024-11-01,293.4102,122200
+iphone 11 pro,78,True,False,False,256,Gold,2019-09-01,False,undamaged,full-set,True,,62,2024-11-01,293.4102,79900
+iphone 12 pro max,82,False,True,False,512,Pacific Blue,2020-10-01,False,undamaged,full-set,True,,49,2024-11-01,293.4102,150400
+iphone 13 pro max,80,True,False,False,512,Graphite,2021-09-01,False,undamaged,full-set,True,,38,2024-11-01,293.4102,206800
+iphone 13,93,False,False,False,128,Midnight,2021-09-01,False,undamaged,full-set,True,,38,2024-11-01,293.4102,117500
+iphone 13,87,True,False,False,256,Red,2021-09-01,False,undamaged,full-set,True,,38,2024-11-01,293.4102,126900
+iphone 13 pro,80,False,False,False,128,Graphite,2021-09-01,False,undamaged,full-set,True,,38,2024-11-01,293.4102,141000
+iphone 13 pro,88,False,False,False,512,Sierra Blue,2021-09-01,False,undamaged,full-set,True,,38,2024-11-01,293.4102,169200
+iphone 13 pro max,83,False,False,True,128,Gold,2021-09-01,False,undamaged,full-set,True,,38,2024-11-01,293.4102,150400
+iphone 13 mini,90,False,False,False,128,Green,2021-09-01,False,undamaged,full-set,True,,38,2024-11-01,293.4102,103400
+iphone 13 mini,75,True,True,False,256,Pink,2021-09-01,False,undamaged,full-set,True,,38,2024-11-01,293.4102,112800
+iphone 14 pro,88,False,False,False,256,Deep Purple,2022-09-01,False,undamaged,full-set,True,,26,2024-11-01,293.4102,206800
+iphone 14 pro max,80,False,False,False,512,Space Black,2022-09-01,False,undamaged,full-set,True,,26,2024-11-01,293.4102,244400
+iphone 15,96,False,False,False,128,Blue,2023-09-01,False,undamaged,full-set,True,,14,2024-11-01,293.4102,235000
+iphone 15 pro,93,False,False,False,256,Titanium,2023-09-01,False,undamaged,full-set,True,,14,2024-11-01,293.4102,282000
+iphone 11,89,False,True,False,64,Red,2019-09-01,False,undamaged,full-set,True,,62,2024-11-01,293.4102,79900
+iphone 15 pro max,90,False,False,False,512,Titanium,2023-09-01,False,undamaged,full-set,True,,14,2024-11-01,293.4102,376000
+iphone 13,93,False,False,False,128,Starlight,2021-09-01,False,undamaged,full-set,True,,38,2024-11-01,293.4102,117500
+iphone 11,82,False,False,False,64,White,2019-09-01,False,undamaged,full-set,True,,62,2024-11-01,293.4102,81780
+iphone se 3,93,False,False,False,256,White,2022-03-01,False,undamaged,full-set,True,,32,2024-11-01,293.4102,102460
+iphone xs max,98,True,False,True,512,Space Gray,2018-09-01,False,undamaged,full-set,True,,74,2024-11-01,293.4102,101520
+iphone 11,89,False,False,False,64,Black,2019-09-01,False,undamaged,full-set,True,,62,2024-11-01,293.4102,89300
+iphone se 2,89,False,False,False,32,White,2020-04-01,False,undamaged,full-set,True,,55,2024-11-01,293.4102,56400
+iphone se 2,82,False,False,False,32,Black,2020-04-01,False,undamaged,full-set,True,,55,2024-11-01,293.4102,48880
+iphone se 2,89,False,True,False,32,White,2020-04-01,False,undamaged,full-set,True,,55,2024-11-01,293.4102,47000
+iphone se 2,86,False,False,False,64,Black,2020-04-01,False,undamaged,full-set,True,,55,2024-11-01,293.4102,63920
+iphone se 2,86,False,False,False,128,White,2020-04-01,False,undamaged,full-set,True,,55,2024-11-01,293.4102,65800
+iphone se 2,100,True,False,False,128,Red,2020-04-01,False,undamaged,full-set,True,,55,2024-11-01,293.4102,65800
+iphone se 2,93,False,False,False,256,White,2020-04-01,False,undamaged,full-set,True,,55,2024-11-01,293.4102,88360
+iphone se 2,90,False,False,False,256,White,2020-04-01,False,undamaged,full-set,True,,55,2024-11-01,293.4102,84600
+iphone se 3,89,False,False,False,32,White,2022-03-01,False,undamaged,full-set,True,,32,2024-11-01,293.4102,70500
+iphone se 3,82,False,False,False,32,Black,2022-03-01,False,undamaged,full-set,True,,32,2024-11-01,293.4102,62980
+iphone se 3,89,False,True,False,32,Red,2022-03-01,False,undamaged,full-set,True,,32,2024-11-01,293.4102,61100
+iphone se 2,90,False,False,False,64,Red,2020-04-01,False,undamaged,full-set,True,,55,2024-11-01,293.4102,65800
+iphone se 3,86,False,False,False,64,Black,2022-03-01,False,undamaged,full-set,True,,32,2024-11-01,293.4102,78020
+iphone se 3,90,False,False,False,64,White,2022-03-01,False,undamaged,full-set,True,,32,2024-11-01,293.4102,79900
+iphone xr,88,False,False,False,512,Blue,2018-10-01,False,undamaged,full-set,True,,73,2024-11-01,293.4102,109040
+iphone xs,80,False,True,False,512,Gold,2018-09-01,False,undamaged,full-set,True,,74,2024-11-01,293.4102,67680
+iphone 8,78,False,False,False,64,Silver,2017-09-01,False,undamaged,full-set,False,,86,2024-11-01,293.4102,42300
+iphone 7 plus,90,False,False,False,128,Jet Black,2016-09-01,False,undamaged,full-set,False,,98,2024-11-01,293.4102,37600
+iphone x,92,False,False,False,64,Space Gray,2017-11-01,False,undamaged,full-set,False,,84,2024-11-01,293.4102,64860
+iphone 6s plus,83,False,False,True,32,Rose Gold,2015-09-01,False,undamaged,full-set,False,,110,2024-11-01,293.4102,20680
+iphone 6s,62,True,False,False,32,Space Gray,2015-09-01,False,undamaged,full-set,False,,110,2024-11-01,293.4102,16920
+iphone se 3,90,False,False,False,256,Red,2022-03-01,False,undamaged,full-set,True,,32,2024-11-01,293.4102,98700
+iphone se 3,100,True,False,False,128,Red,2022-03-01,False,undamaged,full-set,True,,32,2024-11-01,293.4102,79900
+iphone se 3,86,False,False,False,128,White,2022-03-01,False,undamaged,full-set,True,,32,2024-11-01,293.4102,79900
+iphone 7,65,True,True,False,32,Gold,2016-09-01,False,undamaged,full-set,False,,98,2024-11-01,293.4102,18800
+iphone 11 pro max,87,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,353920108555162.0,64,2025-01-01,293.0027,117500
+iphone 12 pro,90,False,False,False,128,White,2020-10-01,False,undamaged,full-set,False,356689110214202.0,51,2025-01-01,293.0027,117500
+iphone 12 pro,86,False,False,False,128,White,2020-10-01,False,undamaged,full-set,False,356690113166100.0,51,2025-01-01,293.0027,117500
+iphone 12 pro,88,False,False,False,128,Blue,2020-10-01,False,undamaged,full-set,False,354523338019246.0,51,2025-01-01,293.0027,117500
+iphone 12 pro max,94,False,False,False,256,Gold,2020-10-01,False,undamaged,full-set,False,356728110928856.0,51,2025-01-01,293.0027,157920
+iphone 12 pro max,91,False,False,False,256,White,2020-10-01,False,undamaged,full-set,False,354860895226560.0,51,2025-01-01,293.0027,157920
+iphone 12 pro max,94,False,False,False,512,Blue,2020-10-01,False,undamaged,full-set,False,356719111915513.0,51,2025-01-01,293.0027,167320
+iphone 13,91,False,False,False,256,Blue,2021-09-01,False,undamaged,full-set,False,351548605302358.0,40,2025-01-01,293.0027,141000
+iphone 8 plus,98,True,False,False,64,Space Gray,2017-09-01,False,undamaged,full-set,False,,88,2025-01-01,293.0027,51700
+iphone 7,68,False,False,False,128,Jet Black,2016-09-01,False,undamaged,full-set,False,,100,2025-01-01,293.0027,28200
+iphone 7,67,True,False,False,32,Matte Black,2016-09-01,False,undamaged,full-set,False,,100,2025-01-01,293.0027,20680
+iphone 7 plus,93,False,False,False,32,Silver,2016-09-01,False,undamaged,full-set,False,,100,2025-01-01,293.0027,32900
+iphone 8,83,False,True,False,64,Gold,2017-09-01,False,undamaged,full-set,False,,88,2025-01-01,293.0027,45120
+iphone x,90,False,False,False,256,Silver,2017-11-01,False,undamaged,full-set,False,,86,2025-01-01,293.0027,56400
+iphone xr,83,False,False,False,128,Yellow,2018-10-01,False,undamaged,phone-only,True,,75,2025-01-01,293.0027,65800
+iphone xs,88,False,True,False,512,Gold,2018-09-01,False,undamaged,full-set,True,,76,2025-01-01,293.0027,70500
+iphone 12 pro,89,False,False,False,128,Blue,2020-10-01,False,undamaged,full-set,False,350320090319912.0,51,2025-01-01,293.0027,117500
+iphone 13,87,False,False,False,256,White,2021-09-01,False,undamaged,full-set,False,354300906832874.0,40,2025-01-01,293.0027,136300
+iphone 12 pro,90,False,False,False,256,White,2020-10-01,False,undamaged,full-set,False,356685112918378.0,51,2025-01-01,293.0027,126900
+iphone x,100,True,False,False,256,Black,2017-11-01,False,undamaged,phone-only,False,353020090161549.0,86,2025-01-01,293.0027,59220
+iphone 11 pro max,87,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,353920108555162.0,64,2025-01-01,293.0027,117500
+iphone xs max,95,True,False,False,64,Space Gray,2018-09-01,False,undamaged,full-set,True,,76,2025-01-01,293.0027,65800
+iphone 7 plus,100,True,False,False,128,Black,2016-09-01,False,undamaged,full-set,False,356568085675664.0,100,2025-01-01,293.0027,42300
+iphone 7 plus,100,True,False,False,128,Black,2016-09-01,False,undamaged,full-set,False,355834088232650.0,100,2025-01-01,293.0027,42300
+iphone 7 plus,100,True,False,False,128,Black,2016-09-01,False,undamaged,full-set,False,355834088232650.0,100,2025-01-01,293.0027,45120
+iphone 8 plus,100,True,False,False,256,Rose Gold,2017-09-01,False,undamaged,full-set,False,356733082293727.0,88,2025-01-01,293.0027,54520
+iphone 8 plus,100,True,False,False,256,Black,2017-09-01,False,undamaged,full-set,False,356733085212468.0,88,2025-01-01,293.0027,54520
+iphone x,100,True,False,False,64,White,2017-11-01,False,undamaged,full-set,False,354866091999538.0,86,2025-01-01,293.0027,51700
+iphone x,100,True,False,False,256,White,2017-11-01,False,undamaged,full-set,False,354862096007518.0,86,2025-01-01,293.0027,61100
+iphone xs,100,True,False,False,256,Black,2018-09-01,False,undamaged,full-set,False,357235094112308.0,76,2025-01-01,293.0027,74260
+iphone xs,100,True,False,False,64,Gold,2018-09-01,False,undamaged,full-set,False,357228095332785.0,76,2025-01-01,293.0027,61100
+iphone xs,100,True,False,False,64,Black,2018-09-01,False,undamaged,full-set,False,357225098256003.0,76,2025-01-01,293.0027,61100
+iphone xs,88,False,False,False,128,Black,2018-09-01,False,undamaged,full-set,False,,76,2025-01-01,293.0027,70500
+iphone xs max,86,False,False,False,256,Black,2018-09-01,False,undamaged,full-set,False,357274091766014.0,76,2025-01-01,293.0027,82720
+iphone 11,89,False,False,False,128,Black,2019-09-01,False,undamaged,full-set,False,356555102295659.0,64,2025-01-01,293.0027,84600
+iphone 11,87,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,356327107225548.0,64,2025-01-01,293.0027,94000
+iphone 11,89,False,False,False,256,Black,2019-09-01,False,undamaged,full-set,False,353980102889868.0,64,2025-01-01,293.0027,94000
+iphone 11 pro,93,False,False,False,256,Red,2019-09-01,False,undamaged,full-set,False,353246109357022.0,64,2025-01-01,293.0027,108100
+iphone 12 pro,90,False,False,False,256,Blue,2020-10-01,False,undamaged,full-set,False,356961134900102.0,51,2025-01-01,293.0027,126900
+iphone 11,86,False,False,False,64,Purple,2019-09-01,False,undamaged,full-set,True,,64,2025-01-01,293.0027,79900
+iphone se 2,100,False,False,False,64,Red,2020-04-01,False,light,full-set,True,,25,2022-05-01,341.85,83500
+iphone x,100,False,False,False,64,Space Gray,2017-11-01,False,light,full-set,False,,54,2022-05-01,341.85,82000
+iphone 8,88,False,False,False,64,Silver,2017-09-01,False,light,full-set,False,,56,2022-05-01,341.85,52500
+iphone 7 plus,100,False,False,False,128,Jet Black,2016-09-01,False,light,full-set,False,,68,2022-05-01,341.85,43000
+iphone 7,65,True,True,False,32,Gold,2016-09-01,False,light,full-set,False,,68,2022-05-01,341.85,21500
+iphone 6s plus,93,False,False,True,32,Rose Gold,2015-09-01,False,light,full-set,False,,80,2022-05-01,341.85,26000
+iphone 6s,62,True,False,False,32,Space Gray,2015-09-01,False,light,full-set,False,,80,2022-05-01,341.85,21500
+iphone se 3,100,False,False,False,256,Red,2022-03-01,False,light,full-set,True,,2,2022-05-01,341.85,119000
+iphone se 3,100,False,False,False,256,White,2022-03-01,False,light,full-set,True,,2,2022-05-01,341.85,123500
+iphone se 3,96,False,False,False,128,White,2022-03-01,False,light,full-set,True,,2,2022-05-01,341.85,101000
+iphone se 3,96,False,False,False,64,Black,2022-03-01,False,light,full-set,True,,2,2022-05-01,341.85,99000
+iphone xr,96,False,False,False,512,Blue,2018-10-01,False,light,full-set,True,,43,2022-05-01,341.85,131500
+iphone se 3,100,False,False,False,64,White,2022-03-01,False,light,full-set,True,,2,2022-05-01,341.85,101000
+iphone se 3,92,False,False,False,32,Black,2022-03-01,False,light,full-set,True,,2,2022-05-01,341.85,80000
+iphone se 3,99,False,False,False,32,White,2022-03-01,False,light,full-set,True,,2,2022-05-01,341.85,89500
+iphone se 2,100,False,False,False,256,White,2020-04-01,False,light,full-set,True,,25,2022-05-01,341.85,107000
+iphone se 2,100,False,False,False,256,White,2020-04-01,False,light,full-set,True,,25,2022-05-01,341.85,112000
+iphone se 2,100,True,False,False,128,Red,2020-04-01,False,light,full-set,True,,25,2022-05-01,341.85,83500
+iphone se 2,96,False,False,False,128,White,2020-04-01,False,light,full-set,True,,25,2022-05-01,341.85,83500
+iphone se 2,96,False,False,False,64,Black,2020-04-01,False,light,full-set,True,,25,2022-05-01,341.85,81000
+iphone se 2,99,False,True,False,32,White,2020-04-01,False,light,full-set,True,,25,2022-05-01,341.85,60000
+iphone se 2,92,False,False,False,32,Black,2020-04-01,False,light,full-set,True,,25,2022-05-01,341.85,62000
+iphone se 2,99,False,False,False,32,White,2020-04-01,False,light,full-set,True,,25,2022-05-01,341.85,71500
+iphone se 3,99,False,True,False,32,Red,2022-03-01,False,light,full-set,True,,2,2022-05-01,341.85,77500
+iphone xs,90,False,True,False,512,Gold,2018-09-01,False,light,full-set,True,,44,2022-05-01,341.85,81500
+iphone se 3,100,True,False,False,128,Red,2022-03-01,False,light,full-set,True,,2,2022-05-01,341.85,101000
+iphone 11,99,False,False,False,64,Black,2019-09-01,False,light,full-set,True,,32,2022-05-01,341.85,102000
+iphone 13 mini,75,True,True,False,256,Pink,2021-09-01,False,light,full-set,True,,8,2022-05-01,341.85,141000
+iphone 13 mini,92,False,False,False,128,Green,2021-09-01,False,light,full-set,True,,8,2022-05-01,341.85,130000
+iphone xs max,100,True,False,True,512,Space Gray,2018-09-01,False,light,full-set,True,,44,2022-05-01,341.85,128000
+iphone 13 pro max,85,False,False,True,128,Gold,2021-09-01,False,light,full-set,True,,8,2022-05-01,341.85,190500
+iphone 13 pro,90,False,False,False,512,Sierra Blue,2021-09-01,False,light,full-set,True,,8,2022-05-01,341.85,202500
+iphone 13 pro,82,False,False,False,128,Graphite,2021-09-01,False,light,full-set,True,,8,2022-05-01,341.85,178500
+iphone 13,87,True,False,False,256,Red,2021-09-01,False,light,full-set,True,,8,2022-05-01,341.85,164500
+iphone 13,100,False,False,False,128,Midnight,2021-09-01,False,light,full-set,True,,8,2022-05-01,341.85,149000
+iphone 13,100,False,False,False,128,Starlight,2021-09-01,False,light,full-set,True,,8,2022-05-01,341.85,149000
+iphone 12 pro max,90,False,True,False,512,Pacific Blue,2020-10-01,False,light,full-set,True,,19,2022-05-01,341.85,166000
+iphone 12 pro,97,False,False,False,256,Graphite,2020-10-01,False,light,full-set,True,,19,2022-05-01,341.85,140000
+iphone 12,78,True,False,False,128,White,2020-10-01,False,light,full-set,True,,19,2022-05-01,341.85,113000
+iphone 13 pro max,80,True,False,False,512,Graphite,2021-09-01,False,light,full-set,True,,8,2022-05-01,341.85,262000
+iphone 11 pro max,76,True,True,False,512,Midnight Green,2019-09-01,False,light,full-set,True,,32,2022-05-01,341.85,113500
+iphone 12,93,False,False,False,64,Blue,2020-10-01,False,light,full-set,True,,19,2022-05-01,341.85,102000
+iphone 11,92,False,False,False,64,White,2019-09-01,False,light,full-set,True,,32,2022-05-01,341.85,100000
+iphone 11,100,False,False,False,128,Green,2019-09-01,False,light,full-set,True,,32,2022-05-01,341.85,119500
+iphone 11,96,False,False,False,128,Purple,2019-09-01,False,light,full-set,True,,32,2022-05-01,341.85,117500
+iphone 11,96,False,False,False,256,White,2019-09-01,False,light,full-set,True,,32,2022-05-01,341.85,119500
+iphone 11,99,False,True,False,64,Red,2019-09-01,False,light,full-set,True,,32,2022-05-01,341.85,97000
+iphone 11,100,False,False,False,512,Green,2019-09-01,False,light,full-set,True,,32,2022-05-01,341.85,146500
+iphone 11,98,False,False,False,512,Purple,2019-09-01,False,light,full-set,True,,32,2022-05-01,341.85,140500
+iphone 11 pro,78,True,False,False,256,Gold,2019-09-01,False,light,full-set,True,,32,2022-05-01,341.85,96500
+iphone 11,100,True,False,False,256,Red,2019-09-01,False,light,full-set,True,,32,2022-05-01,341.85,119500
+iphone xs max,98,True,False,True,512,Space Gray,2018-09-01,False,light,full-set,True,,50,2022-11-01,363.3,122500
+iphone 11,100,True,False,False,256,Red,2019-09-01,False,light,full-set,True,,38,2022-11-01,363.3,119000
+iphone 11,97,False,False,False,64,Black,2019-09-01,False,light,full-set,True,,38,2022-11-01,363.3,107500
+iphone 11,90,False,False,False,64,White,2019-09-01,False,light,full-set,True,,38,2022-11-01,363.3,98500
+iphone 11,97,False,True,False,64,Red,2019-09-01,False,light,full-set,True,,38,2022-11-01,363.3,96500
+iphone 11,98,False,False,False,128,Green,2019-09-01,False,light,full-set,True,,38,2022-11-01,363.3,119000
+iphone xs,88,False,True,False,512,Gold,2018-09-01,False,light,full-set,True,,50,2022-11-01,363.3,85000

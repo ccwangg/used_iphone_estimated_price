@@ -326,6 +326,20 @@
             <h3>📱 iPhone 詳細資訊</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
                 <div class="stat-item">
+                    <div class="stat-label">型號變體</div>
+                    <div class="stat-value">
+                        {% if result.iphone_variant %}
+                            {% if result.iphone_variant == 'standard' %}一般款
+                            {% elif result.iphone_variant == 'pro' %}Pro
+                            {% elif result.iphone_variant == 'pro max' %}Pro Max
+                            {% elif result.iphone_variant == 'mini' %}mini
+                            {% elif result.iphone_variant == 'plus' %}Plus
+                            {% else %}{{ result.iphone_variant }}
+                            {% endif %}
+                        {% else %}未指定{% endif %}
+                    </div>
+                </div>
+                <div class="stat-item">
                     <div class="stat-label">儲存容量</div>
                     <div class="stat-value">{{ result.storage }} GB</div>
                 </div>

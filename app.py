@@ -22,9 +22,9 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webp'}
 
 # 初始化模組
 iphone_predictor = iPhonePredictor()
-# 使用新的資料引擎（從 gemma-keras-gemma_1.1_instruct_2b_en-v4 資料夾讀取真實資料）
+# 使用新的資料引擎（從 archive 資料夾讀取真實資料）
 data_engine = DataEngine(
-    data_dir='gemma-keras-gemma_1.1_instruct_2b_en-v4',
+    data_dir='archive',
     database_file='mock_data.csv',
     min_similarity=70  # 模糊匹配最低相似度 70%
 )
@@ -92,6 +92,7 @@ def upload_file():
     camera_ok = request.form.get('camera_ok', type=int, default=1)
     battery_health = request.form.get('battery_health', type=float, default=85.0) / 100.0  # 轉換為 0-1
     storage = request.form.get('storage', type=int, default=256)
+    iphone_variant = request.form.get('iphone_variant', default='').strip()
     
     if file.filename == '':
         flash('請選擇要上傳的圖片')
@@ -129,8 +130,35 @@ def upload_file():
             
             # 3. 使用資料引擎獲取價格資料（會自動執行：資料庫查詢 -> 模糊匹配 -> 爬蟲）
             # 優先使用辨識到的具體型號，如果沒有則使用 'iPhone'
-            search_term = iphone_model if (iphone_model and iphone_model != 'iPhone (型號待確認)') else 'iPhone'
+            # 如果使用者選擇了型號變體，則組合搜尋詞以提高精確度
+            if iphone_model and iphone_model != 'iPhone (型號待確認)':
+                search_term = iphone_model
+            else:
+                # 如果沒有辨識出具體型號，但有選擇變體，則組合搜尋
+                if iphone_variant:
+                    # 將變體轉換為搜尋關鍵字
+                    variant_keywords = {
+                        'mini': 'mini',
+                        'standard': '',  # 一般款不需要額外關鍵字
+                        'pro': 'Pro',
+                        'pro max': 'Pro Max',
+                        'plus': 'Plus'
+                    }
+                    variant_keyword = variant_keywords.get(iphone_variant.lower(), '')
+                    if variant_keyword:
+                        search_term = f'iPhone {variant_keyword}'
+                    else:
+                        search_term = 'iPhone'
+                else:
+                    search_term = 'iPhone'
+            
+            print(f"使用搜尋詞: {search_term} (變體: {iphone_variant})")
             price_data = data_engine.get_prices(search_term, max_records=200)
+            
+            # 如果使用變體但沒找到資料，嘗試更寬鬆的搜尋
+            if len(price_data) == 0 and iphone_variant:
+                print(f"使用變體 '{iphone_variant}' 未找到資料，嘗試更寬鬆的搜尋...")
+                price_data = data_engine.get_prices('iPhone', max_records=200)
             
             # 4. 獲取參考價格（蝦皮、露天最新五筆）
             reference_prices = data_engine.get_reference_prices('iPhone', max_items=5)
@@ -188,6 +216,7 @@ def upload_file():
             # 準備結果資料
             result_data = {
                 'item_name': iphone_model or item_name,
+                'iphone_variant': iphone_variant,
                 'confidence': confidence,
                 'user_condition': user_condition,
                 'warranty_months': warranty_months,

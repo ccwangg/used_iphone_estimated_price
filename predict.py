@@ -10,7 +10,7 @@ import os
 class YOLOPredictor:
     """YOLOv8 預測器類別"""
     
-    def __init__(self, model_path='yolov8n.pt'):
+    def __init__(self, model_path='C:\Users\User\runs\detect\train\weights\best.pt'):
         """
         初始化 YOLO 模型
         Args:

@@ -2,8 +2,8 @@ train: ../train/images
 val: ../valid/images
 test: ../test/images
 
-nc: 3
-names: ['-iphone', '-iphone12', '-iphone13']
+nc: 9
+names: ['-iphone11', '-iphone12', '-iphone13', '-iphonex', '-iphonexe2', '-iphonexe3', '-iphone11 pro', '-iphone12 pro', '-iphone13 pro']
 
 roboflow:
   workspace: test-csibs

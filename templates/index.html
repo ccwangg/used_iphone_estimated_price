@@ -194,7 +194,7 @@
                 <div class="upload-icon">📷</div>
                 <p>點擊或拖曳圖片到此處上傳</p>
                 <p class="info-text">支援 PNG, JPG, JPEG, GIF, WEBP (最大 16MB)</p>
-                <input type="file" name="file" id="fileInput" accept="image/*" required>
+                <input type="file" name="file" id="fileInput" accept="image/*">
             </div>
             <img id="previewImage" class="preview-image" alt="預覽圖片">
             
@@ -252,6 +252,19 @@
                 <p class="info-text">選擇 iPhone 的儲存容量</p>
             </div>
             
+            <div class="form-group">
+                <label for="iphone_variant">iPhone 型號變體</label>
+                <select name="iphone_variant" id="iphone_variant" required>
+                    <option value="">請選擇型號變體</option>
+                    <option value="mini">mini</option>
+                    <option value="standard" selected>一般款（標準版）</option>
+                    <option value="pro">Pro</option>
+                    <option value="pro max">Pro Max</option>
+                    <option value="plus">Plus</option>
+                </select>
+                <p class="info-text">選擇您的 iPhone 型號變體，有助於更精確的價格評估</p>
+            </div>
+            
             <button type="submit" class="btn">開始評估</button>
         </form>
         
@@ -301,6 +314,31 @@
                 fileInput.files = files;
                 const event = new Event('change', { bubbles: true });
                 fileInput.dispatchEvent(event);
+            }
+        });
+        
+        // 表單提交驗證
+        document.getElementById('uploadForm').addEventListener('submit', (e) => {
+            const file = fileInput.files[0];
+            if (!file) {
+                e.preventDefault();
+                alert('請選擇要上傳的圖片');
+                return false;
+            }
+            
+            // 檢查檔案類型
+            const allowedTypes = ['image/png', 'image/jpeg', 'image/jpg', 'image/gif', 'image/webp'];
+            if (!allowedTypes.includes(file.type)) {
+                e.preventDefault();
+                alert('不支援的檔案格式，請上傳 PNG、JPG、JPEG、GIF 或 WEBP 格式的圖片');
+                return false;
+            }
+            
+            // 檢查檔案大小（16MB）
+            if (file.size > 16 * 1024 * 1024) {
+                e.preventDefault();
+                alert('檔案大小超過 16MB，請選擇較小的檔案');
+                return false;
             }
         });
     </script>

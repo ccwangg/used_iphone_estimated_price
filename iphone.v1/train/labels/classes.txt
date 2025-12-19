@@ -1,0 +1,9 @@
+-iphone11
+-iphone12
+-iphone13
+-iphonex
+-iphonexe2
+-iphonexe3
+-iphone11 pro
+-iphone12 pro
+-iphone13 pro

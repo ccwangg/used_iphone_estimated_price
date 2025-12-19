@@ -21,7 +21,7 @@ from thefuzz import fuzz, process
 class DataEngine:
     """資料獲取引擎類別"""
     
-    def __init__(self, data_dir='gemma-keras-gemma_1.1_instruct_2b_en-v4', 
+    def __init__(self, data_dir='archive', 
                  database_file='mock_data.csv', min_similarity=70):
         """
         初始化資料引擎
@@ -112,20 +112,23 @@ class DataEngine:
                 self.database_df[model_col].str.lower() == item_name.lower()
             ]
         else:
-            # 部分匹配
+            # 部分匹配（寬鬆搜尋）
+            # 使用 str.contains，讓 "iPhone" 可以匹配 "iPhone 13"、"iPhone 14 Pro" 等
+            # 例如：搜尋 "iPhone" 會匹配到所有包含 "iPhone" 的型號
             matched = self.database_df[
                 self.database_df[model_col].str.lower().str.contains(item_name.lower(), na=False)
             ]
         
         return matched.copy()
     
-    def _fuzzy_match(self, item_name, data_df, model_column='model'):
+    def _fuzzy_match(self, item_name, data_df, model_column='model', threshold=None):
         """
         使用 TheFuzz 進行模糊匹配
         Args:
             item_name: 要搜尋的物品名稱
             data_df: 資料 DataFrame
             model_column: 型號欄位名稱
+            threshold: 相似度門檻（如果為 None，使用 self.min_similarity）
         Returns:
             pd.DataFrame: 匹配的資料
         """
@@ -151,11 +154,14 @@ class DataEngine:
         
         matched_model, similarity_score, _ = result
         
+        # 使用傳入的門檻或預設門檻
+        actual_threshold = threshold if threshold is not None else self.min_similarity
+        
         print(f"模糊匹配結果: '{item_name}' -> '{matched_model}' (相似度: {similarity_score}%)")
         
         # 檢查相似度是否達到最低要求
-        if similarity_score < self.min_similarity:
-            print(f"相似度 {similarity_score}% 低於最低要求 {self.min_similarity}%")
+        if similarity_score < actual_threshold:
+            print(f"相似度 {similarity_score}% 低於最低要求 {actual_threshold}%")
             return pd.DataFrame()
         
         # 回傳匹配的資料
@@ -198,10 +204,11 @@ class DataEngine:
         根據物品名稱獲取價格資料
         邏輯流程：
         1. 查詢資料庫（精確匹配）
-        2. 查詢資料庫（部分匹配）
+        2. 查詢資料庫（部分匹配 - 寬鬆搜尋）
         3. 查詢資料目錄中的 CSV 檔案（精確匹配）
-        4. 查詢資料目錄中的 CSV 檔案（模糊匹配）
-        5. 觸發爬蟲（後備）
+        4. 查詢資料目錄中的 CSV 檔案（部分匹配 - 寬鬆搜尋）
+        5. 查詢資料目錄中的 CSV 檔案（模糊匹配 - 降低門檻）
+        6. 觸發爬蟲（後備）
         Args:
             item_name: 物品名稱
             max_records: 最大記錄數
@@ -216,7 +223,8 @@ class DataEngine:
             print(f"✓ 在資料庫中找到 {len(result)} 筆資料（精確匹配）")
             return result.head(max_records).reset_index(drop=True)
         
-        # 步驟 2: 查詢資料庫（部分匹配）
+        # 步驟 2: 查詢資料庫（部分匹配 - 寬鬆搜尋）
+        # 使用 str.contains，讓 "iPhone" 可以匹配 "iPhone 13"、"iPhone 14" 等
         result = self._search_database(item_name, exact_match=False)
         if len(result) > 0:
             print(f"✓ 在資料庫中找到 {len(result)} 筆資料（部分匹配）")
@@ -242,14 +250,22 @@ class DataEngine:
                 print(f"✓ 在 {file_name} 中找到 {len(matched)} 筆資料（精確匹配）")
                 return matched.head(max_records).reset_index(drop=True)
             
-            # 部分匹配
+            # 部分匹配（寬鬆搜尋）- 優先使用這個，因為它最寬鬆
+            # 例如："iPhone" 可以匹配 "iPhone 13"、"iPhone 14 Pro" 等
             matched = df[df[model_col].str.lower().str.contains(item_name.lower(), na=False)]
             if len(matched) > 0:
                 print(f"✓ 在 {file_name} 中找到 {len(matched)} 筆資料（部分匹配）")
                 return matched.head(max_records).reset_index(drop=True)
             
-            # 模糊匹配
-            matched = self._fuzzy_match(item_name, df, model_col)
+            # 模糊匹配（降低門檻，特別是對於通用詞如 "iPhone"）
+            # 如果搜尋詞是通用詞（如 "iPhone"），降低相似度要求
+            current_threshold = self.min_similarity
+            if item_name.lower() in ['iphone', 'phone', 'cell phone', 'mobile']:
+                # 對於通用詞，降低門檻到 50%
+                current_threshold = 50
+                print(f"偵測到通用詞 '{item_name}'，降低模糊匹配門檻至 {current_threshold}%")
+            
+            matched = self._fuzzy_match(item_name, df, model_col, threshold=current_threshold)
             if len(matched) > 0:
                 print(f"✓ 在 {file_name} 中找到 {len(matched)} 筆資料（模糊匹配）")
                 return matched.head(max_records).reset_index(drop=True)
