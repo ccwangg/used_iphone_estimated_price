@@ -283,10 +283,12 @@
             <img src="{{ url_for('static', filename=result.annotated_image) }}" alt="標註圖片">
         </div>
         
+        {% if result.cluster_plot %}
         <div class="image-section">
             <h3>價格分群分析</h3>
             <img src="{{ url_for('static', filename=result.cluster_plot) }}" alt="分群圖表">
         </div>
+        {% endif %}
         
         <div class="cluster-info">
             <h3>市場價格區間分析</h3>

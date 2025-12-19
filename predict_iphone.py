@@ -11,13 +11,45 @@ import re
 class iPhonePredictor:
     """iPhone 型號辨識器類別"""
     
-    def __init__(self, model_path='yolov8n.pt'):
+    def __init__(self, model_path=None):
         """
         初始化 YOLO 模型
         Args:
-            model_path: 模型檔案路徑，預設使用預訓練模型
+            model_path: 模型檔案路徑，如果為 None 則自動尋找或使用預設模型
         """
-        self.model = YOLO(model_path)
+        # 如果沒有指定路徑，嘗試使用訓練好的模型
+        if model_path is None:
+            # 嘗試多個可能的路徑
+            possible_paths = [
+                r'C:\Users\User\runs\detect\train\weights\best.pt',
+                'best.pt',
+                'yolov8n.pt'
+            ]
+            
+            model_path = None
+            for path in possible_paths:
+                if os.path.exists(path):
+                    model_path = path
+                    break
+            
+            # 如果都找不到，使用預設模型
+            if model_path is None:
+                print("警告: 找不到訓練模型，使用預設模型 yolov8n.pt")
+                model_path = 'yolov8n.pt'
+        
+        # 載入模型（使用 try-except 處理可能的錯誤）
+        try:
+            self.model = YOLO(model_path)
+            print(f"✓ 已載入模型: {model_path}")
+        except Exception as e:
+            print(f"錯誤: 無法載入模型 {model_path}: {e}")
+            print("嘗試使用預設模型...")
+            try:
+                self.model = YOLO('yolov8n.pt')
+                print("✓ 已載入預設模型: yolov8n.pt")
+            except Exception as e2:
+                print(f"嚴重錯誤: 無法載入任何模型: {e2}")
+                raise
         
         # iPhone 型號關鍵字對照表
         self.iphone_models = {
@@ -73,13 +105,27 @@ class iPhonePredictor:
                     'bbox': xyxy
                 })
         
-        # 檢查是否為手機
+        # 檢查是否為 iPhone（支援新模型的標籤格式：-iphone, -iphone12, -iphone13 等）
         is_phone = False
         best_pred = None
         
         for pred in predictions:
-            pred_name_lower = pred['name'].lower()
-            if 'phone' in pred_name_lower or 'cell' in pred_name_lower or 'mobile' in pred_name_lower:
+            pred_name = pred['name']
+            pred_name_lower = pred_name.lower()
+            
+            # 檢查是否為 iPhone（支援多種格式）
+            # 1. 新模型格式：-iphone, -iphone12, -iphone13 等（開頭有減號）
+            # 2. 舊模型格式：cell phone, phone, mobile
+            # 3. 標準格式：iphone, iphone 12, iphone 13 等
+            is_iphone_label = (
+                pred_name_lower.startswith('-iphone') or  # 新模型格式：-iphone, -iphone12
+                'iphone' in pred_name_lower or            # 包含 iphone
+                'phone' in pred_name_lower or             # 包含 phone
+                'cell' in pred_name_lower or              # 包含 cell
+                'mobile' in pred_name_lower               # 包含 mobile
+            )
+            
+            if is_iphone_label:
                 is_phone = True
                 if best_pred is None or pred['confidence'] > best_pred['confidence']:
                     best_pred = pred
@@ -93,9 +139,9 @@ class iPhonePredictor:
                 'is_iphone': False
             }
         
-        # 嘗試從圖片檔名或路徑推斷 iPhone 型號
-        # 實際應用中，可能需要更進階的模型來辨識具體型號
-        iphone_model = self._detect_iphone_model(image_path, best_pred)
+        # 從辨識結果中提取 iPhone 型號
+        # 新模型可能直接辨識出 -iphone12, -iphone13 等
+        iphone_model = self._extract_iphone_model(best_pred, image_path)
         
         return {
             'item_name': 'iPhone',
@@ -105,25 +151,68 @@ class iPhonePredictor:
             'is_iphone': True
         }
     
-    def _detect_iphone_model(self, image_path, prediction):
+    def _extract_iphone_model(self, prediction, image_path):
         """
-        嘗試從圖片或預測結果推斷 iPhone 型號
-        這是一個簡化版本，實際應用中可能需要：
-        1. 訓練專門的 iPhone 型號辨識模型
-        2. 使用 OCR 讀取圖片中的型號文字
-        3. 分析圖片特徵（尺寸、外觀等）
+        從辨識結果中提取 iPhone 型號
+        支援新模型格式：-iphone, -iphone12, -iphone13 等
         """
-        # 從檔名嘗試提取型號資訊
-        filename = os.path.basename(image_path).lower()
+        if prediction is None:
+            return 'iPhone (型號待確認)'
         
-        # 檢查檔名中是否包含型號資訊
+        pred_name = prediction['name']
+        pred_name_lower = pred_name.lower()
+        
+        # 處理新模型格式：-iphone12 -> iPhone 12
+        if pred_name_lower.startswith('-iphone'):
+            # 移除開頭的減號
+            model_str = pred_name.replace('-', '').replace('_', ' ')
+            
+            # 嘗試提取數字（如 -iphone12 -> iPhone 12）
+            # 使用正則表達式提取數字
+            numbers = re.findall(r'\d+', model_str)
+            if numbers:
+                # 如果有數字，組合成 "iPhone 12" 格式
+                model_number = numbers[0]
+                # 檢查是否有其他關鍵字（Pro, Max, mini, Plus）
+                if 'pro' in pred_name_lower and 'max' in pred_name_lower:
+                    return f'iPhone {model_number} Pro Max'
+                elif 'pro' in pred_name_lower:
+                    return f'iPhone {model_number} Pro'
+                elif 'mini' in pred_name_lower:
+                    return f'iPhone {model_number} mini'
+                elif 'plus' in pred_name_lower:
+                    return f'iPhone {model_number} Plus'
+                else:
+                    return f'iPhone {model_number}'
+            else:
+                # 沒有數字，可能是 -iphone（通用）
+                return 'iPhone (型號待確認)'
+        
+        # 處理標準格式：iphone 12, iPhone 13 等
+        if 'iphone' in pred_name_lower:
+            # 嘗試提取數字和變體
+            numbers = re.findall(r'\d+', pred_name)
+            if numbers:
+                model_number = numbers[0]
+                if 'pro' in pred_name_lower and 'max' in pred_name_lower:
+                    return f'iPhone {model_number} Pro Max'
+                elif 'pro' in pred_name_lower:
+                    return f'iPhone {model_number} Pro'
+                elif 'mini' in pred_name_lower:
+                    return f'iPhone {model_number} mini'
+                elif 'plus' in pred_name_lower:
+                    return f'iPhone {model_number} Plus'
+                else:
+                    return f'iPhone {model_number}'
+        
+        # 如果無法從辨識結果判斷，嘗試從檔名提取
+        filename = os.path.basename(image_path).lower()
         for model in self.iphone_versions:
             model_lower = model.lower().replace(' ', '')
             if model_lower in filename.replace(' ', '').replace('_', '').replace('-', ''):
                 return model
         
-        # 如果無法從檔名判斷，回傳通用 iPhone
-        # 實際應用中，這裡可以加入更複雜的辨識邏輯
+        # 如果都無法判斷，回傳通用 iPhone
         return 'iPhone (型號待確認)'
     
     def predict_with_visualization(self, image_path, output_path=None, confidence=0.25):

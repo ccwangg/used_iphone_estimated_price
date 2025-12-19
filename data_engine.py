@@ -22,7 +22,7 @@ class DataEngine:
     """資料獲取引擎類別"""
     
     def __init__(self, data_dir='archive', 
-                 database_file='mock_data.csv', min_similarity=70):
+                 database_file='iphoneFeaturesPriceDataset.csv', min_similarity=70):
         """
         初始化資料引擎
         Args:
@@ -74,12 +74,112 @@ class DataEngine:
                 file_path = os.path.join(self.data_dir, file)
                 try:
                     df = pd.read_csv(file_path, encoding='utf-8-sig')
+                    
+                    # 統一欄位名稱，讓 PriceAnalyzer 能正常運作
+                    df = self._normalize_dataframe(df, file)
+                    
                     data_files[file] = df
                     print(f"已載入資料檔案: {file} ({len(df)} 筆資料)")
                 except Exception as e:
                     print(f"載入檔案失敗 {file}: {e}")
         
         return data_files
+    
+    def _normalize_dataframe(self, df, filename):
+        """
+        統一資料格式，將 Kaggle 資料集轉換為系統可用的格式
+        Args:
+            df: 原始 DataFrame
+            filename: 檔案名稱
+        Returns:
+            DataFrame: 標準化後的 DataFrame
+        """
+        df = df.copy()
+        
+        # 處理 Kaggle 資料集格式（iphoneFeaturesPriceDataset.csv）
+        if 'current_price(LKR)' in df.columns:
+            # 將 LKR（斯里蘭卡盧比）轉換為台幣（假設匯率約 0.1，實際應根據當前匯率調整）
+            # 1 LKR ≈ 0.1 TWD（粗略估算）
+            df['price'] = df['current_price(LKR)'] * 0.1
+            
+            # 統一型號欄位名稱
+            if 'Model' in df.columns:
+                df['model'] = df['Model']
+                df['item_name'] = df['Model']
+            elif 'model' not in df.columns:
+                df['model'] = 'iPhone'
+                df['item_name'] = 'iPhone'
+            
+            # 如果沒有 condition 欄位，設定預設值
+            if 'condition' not in df.columns:
+                # 根據損壞狀況推斷 condition（如果有相關欄位）
+                if 'backglass_damages' in df.columns:
+                    # 根據損壞狀況設定 condition（1-5分）
+                    def map_condition(x):
+                        if pd.isna(x):
+                            return 3
+                        x_str = str(x).strip()
+                        if x_str.lower() in ['yes', 'true', '1', '有', '是']:
+                            return 1  # 有損壞
+                        elif x_str.lower() in ['no', 'false', '0', '無', '否']:
+                            return 4  # 無損壞
+                        else:
+                            return 3  # 預設
+                    df['condition'] = df['backglass_damages'].apply(map_condition)
+                else:
+                    df['condition'] = 3  # 預設一般狀況
+            
+            # 如果沒有 warranty_months 欄位，設定預設值
+            if 'warranty_months' not in df.columns:
+                df['warranty_months'] = 0
+            
+            # 如果沒有 screen_broken 欄位，根據其他損壞欄位推斷
+            if 'screen_broken' not in df.columns:
+                if 'screen_damages' in df.columns:
+                    def map_screen_broken(x):
+                        if pd.isna(x):
+                            return 0
+                        x_str = str(x).strip()
+                        if x_str.lower() in ['yes', 'true', '1', '有', '是']:
+                            return 1
+                        else:
+                            return 0
+                    df['screen_broken'] = df['screen_damages'].apply(map_screen_broken)
+                else:
+                    df['screen_broken'] = 0
+            
+            # 如果沒有 camera_ok 欄位，設定預設值
+            if 'camera_ok' not in df.columns:
+                df['camera_ok'] = 1  # 預設鏡頭完好
+            
+            # 如果沒有 battery_health 欄位，設定預設值
+            if 'battery_health' not in df.columns:
+                df['battery_health'] = 0.85  # 預設 85%
+            
+            # 如果沒有 storage 欄位，嘗試從其他欄位推斷
+            if 'storage' not in df.columns:
+                if 'Storage' in df.columns:
+                    # 轉換儲存容量（例如 "128GB" -> 128）
+                    df['storage'] = df['Storage'].astype(str).str.extract(r'(\d+)').astype(float).fillna(256)
+                else:
+                    df['storage'] = 256  # 預設 256GB
+            
+            print(f"  已轉換 Kaggle 資料格式: {filename}")
+        
+        # 確保必要的欄位存在
+        required_cols = ['price', 'model', 'item_name', 'condition', 'warranty_months']
+        for col in required_cols:
+            if col not in df.columns:
+                if col == 'price':
+                    df[col] = 0
+                elif col == 'model' or col == 'item_name':
+                    df[col] = 'iPhone'
+                elif col == 'condition':
+                    df[col] = 3
+                elif col == 'warranty_months':
+                    df[col] = 0
+        
+        return df
     
     def _search_database(self, item_name, exact_match=True):
         """
@@ -270,18 +370,24 @@ class DataEngine:
                 print(f"✓ 在 {file_name} 中找到 {len(matched)} 筆資料（模糊匹配）")
                 return matched.head(max_records).reset_index(drop=True)
         
-        # 步驟 4: 觸發爬蟲（後備）
-        print(f"⚠ 資料庫和資料檔案中找不到 '{item_name}'，啟動爬蟲...")
-        scraped_data = self._scrape_prices(item_name, max_records)
+        # 步驟 4: 觸發爬蟲（後備）- 暫時關閉以避免阻塞
+        # 注意：爬蟲功能已暫時關閉，因為效率低且易被擋，會導致頁面卡住
+        print(f"⚠ 資料庫和資料檔案中找不到 '{item_name}'")
+        print("   爬蟲功能已暫時關閉，請確保資料庫中有相關資料")
+        return pd.DataFrame()
         
-        if len(scraped_data) > 0:
-            # 自動儲存爬蟲結果
-            print("正在儲存爬蟲結果到資料庫...")
-            self._save_to_database(scraped_data)
-            return scraped_data
-        else:
-            print("❌ 爬蟲也無法取得資料")
-            return pd.DataFrame()
+        # 以下為原本的爬蟲邏輯（已註解）
+        # print(f"⚠ 資料庫和資料檔案中找不到 '{item_name}'，啟動爬蟲...")
+        # scraped_data = self._scrape_prices(item_name, max_records)
+        # 
+        # if len(scraped_data) > 0:
+        #     # 自動儲存爬蟲結果
+        #     print("正在儲存爬蟲結果到資料庫...")
+        #     self._save_to_database(scraped_data)
+        #     return scraped_data
+        # else:
+        #     print("❌ 爬蟲也無法取得資料")
+        #     return pd.DataFrame()
     
     def get_reference_prices(self, item_name, max_items=5):
         """
