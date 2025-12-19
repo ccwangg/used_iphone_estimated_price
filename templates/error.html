@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>錯誤 - AI 二手物價值評估系統</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .error-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #e74c3c;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        
+        .error-message {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .error-details {
+            background: #f8f9ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .error-details h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .error-details p {
+            color: #666;
+            margin: 5px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 10px;
+            transition: transform 0.2s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .suggestions {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff4e8;
+            border-radius: 10px;
+            border-left: 4px solid #ff8800;
+        }
+        
+        .suggestions h3 {
+            color: #ff8800;
+            margin-bottom: 10px;
+        }
+        
+        .suggestions ul {
+            text-align: left;
+            color: #666;
+            margin-left: 20px;
+        }
+        
+        .suggestions li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-icon">⚠️</div>
+        <h1>無法辨識物品</h1>
+        
+        {% if error_type == 'unknown_item' %}
+        <div class="error-message">
+            <p>很抱歉，系統無法辨識您上傳的圖片中的物品。</p>
+            <p>請確認圖片清晰且包含可辨識的物品。</p>
+        </div>
+        
+        <div class="error-details">
+            <h3>辨識資訊</h3>
+            <p><strong>辨識結果：</strong>{{ item_name }}</p>
+            <p><strong>信心度：</strong>{{ "%.1f"|format(confidence * 100) }}%</p>
+        </div>
+        
+        <div class="suggestions">
+            <h3>建議</h3>
+            <ul>
+                <li>確保圖片清晰，物品完整出現在畫面中</li>
+                <li>避免圖片過於模糊或光線不足</li>
+                <li>嘗試從不同角度拍攝物品</li>
+                <li>確認物品是常見的日常用品</li>
+            </ul>
+        </div>
+        
+        {% elif error_type == 'no_price_data' %}
+        <div class="error-message">
+            <p>很抱歉，系統無法找到「{{ item_name }}」的價格資料。</p>
+            <p>該物品可能過於特殊或市場上較少見。</p>
+        </div>
+        
+        <div class="error-details">
+            <h3>辨識資訊</h3>
+            <p><strong>辨識結果：</strong>{{ item_name }}</p>
+            <p><strong>信心度：</strong>{{ "%.1f"|format(confidence * 100) }}%</p>
+        </div>
+        
+        <div class="suggestions">
+            <h3>建議</h3>
+            <ul>
+                <li>嘗試使用更通用的物品名稱搜尋</li>
+                <li>檢查物品名稱是否正確</li>
+                <li>稍後再試，可能是網路連線問題</li>
+            </ul>
+        </div>
+        {% endif %}
+        
+        <div style="margin-top: 30px;">
+            <a href="/" class="btn">返回首頁</a>
+        </div>
+    </div>
+</body>
+</html>
+

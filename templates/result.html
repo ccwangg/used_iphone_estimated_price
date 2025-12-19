@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>評估結果 - AI 二手物價值評估系統</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .result-card {
+            background: #f8f9ff;
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .result-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .result-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+        
+        .result-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .image-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .image-section img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+        }
+        
+        .cluster-info {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .cluster-item {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+        
+        .cluster-low {
+            background: #ffe8e8;
+            border-color: #ff4444;
+        }
+        
+        .cluster-mid {
+            background: #fff4e8;
+            border-color: #ff8800;
+        }
+        
+        .cluster-high {
+            background: #e8ffe8;
+            border-color: #44ff44;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 10px;
+            transition: transform 0.2s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+        }
+        
+        .actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 10px;
+        }
+        
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.85em;
+            margin-top: 5px;
+        }
+        
+        .reference-section {
+            margin: 30px 0;
+            background: #fff;
+            border-radius: 15px;
+            padding: 25px;
+        }
+        
+        .reference-section h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        
+        .platform-section {
+            margin-bottom: 30px;
+        }
+        
+        .platform-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f8f9ff;
+            border-radius: 8px;
+        }
+        
+        .platform-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        
+        .platform-name {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+        
+        .reference-list {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .reference-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9ff;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s ease;
+        }
+        
+        .reference-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .reference-info {
+            flex: 1;
+        }
+        
+        .reference-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+        
+        .reference-price {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-left: 15px;
+        }
+        
+        .reference-link {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.85em;
+            margin-top: 5px;
+            display: inline-block;
+        }
+        
+        .reference-link:hover {
+            text-decoration: underline;
+        }
+        
+        .no-reference {
+            text-align: center;
+            color: #999;
+            padding: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 評估結果</h1>
+        
+        <div class="result-grid">
+            <div class="result-card">
+                <h3>辨識物品</h3>
+                <div class="result-value">{{ result.item_name }}</div>
+                <div class="result-label">辨識信心度: {{ "%.1f"|format(result.confidence * 100) }}%</div>
+            </div>
+            
+            <div class="result-card">
+                <h3>建議售價</h3>
+                <div class="result-value">NT$ {{ "%.0f"|format(result.predicted_price) }}</div>
+                <div class="result-label">根據狀況 {{ result.user_condition }} 分，保固 {{ result.warranty_months }} 個月</div>
+            </div>
+            
+            <div class="result-card">
+                <h3>模型準確度</h3>
+                <div class="result-value">{{ "%.1f"|format(result.model_r2 * 100) }}%</div>
+                <div class="result-label">決策樹 R² 分數</div>
+            </div>
+        </div>
+        
+        <div class="image-section">
+            <h3>YOLO 標註結果</h3>
+            <img src="{{ url_for('static', filename=result.annotated_image) }}" alt="標註圖片">
+        </div>
+        
+        <div class="image-section">
+            <h3>價格分群分析</h3>
+            <img src="{{ url_for('static', filename=result.cluster_plot) }}" alt="分群圖表">
+        </div>
+        
+        <div class="cluster-info">
+            <h3>市場價格區間分析</h3>
+            {% for cluster_id, info in result.cluster_info.items() %}
+            <div class="cluster-item {% if '低價' in info.name %}cluster-low{% elif '高價' in info.name %}cluster-high{% else %}cluster-mid{% endif %}">
+                <strong>{{ info.name }}</strong>
+                <div style="margin-top: 10px;">
+                    <div>平均價格: NT$ {{ "%.0f"|format(info.stats.mean) }}</div>
+                    <div>價格範圍: NT$ {{ "%.0f"|format(info.stats.min) }} - NT$ {{ "%.0f"|format(info.stats.max) }}</div>
+                    <div>資料筆數: {{ info.stats.count }} 筆</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-value">NT$ {{ "%.0f"|format(result.price_stats.mean) }}</div>
+                <div class="stat-label">平均價格</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">NT$ {{ "%.0f"|format(result.price_stats.median) }}</div>
+                <div class="stat-label">中位數價格</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">NT$ {{ "%.0f"|format(result.price_stats.min) }}</div>
+                <div class="stat-label">最低價格</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">NT$ {{ "%.0f"|format(result.price_stats.max) }}</div>
+                <div class="stat-label">最高價格</div>
+            </div>
+        </div>
+        
+        <!-- iPhone 詳細資訊 -->
+        <div class="reference-section">
+            <h3>📱 iPhone 詳細資訊</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+                <div class="stat-item">
+                    <div class="stat-label">儲存容量</div>
+                    <div class="stat-value">{{ result.storage }} GB</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">螢幕狀況</div>
+                    <div class="stat-value">{% if result.screen_broken == 0 %}✅ 完好{% else %}❌ 破裂{% endif %}</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">鏡頭狀況</div>
+                    <div class="stat-value">{% if result.camera_ok == 1 %}✅ 完好{% else %}❌ 損壞{% endif %}</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">電池健康度</div>
+                    <div class="stat-value">{{ "%.0f"|format(result.battery_health * 100) }}%</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 參考價格區塊 -->
+        {% if result.reference_prices and (result.reference_prices.shopee or result.reference_prices.ruten) %}
+        <div class="reference-section">
+            <h3>📋 市場參考價格（最新五筆）</h3>
+                <!-- 蝦皮參考價格 -->
+                {% if result.reference_prices.shopee %}
+                <div class="platform-section">
+                    <div class="platform-header">
+                        <span class="platform-icon">🛒</span>
+                        <span class="platform-name">蝦皮購物</span>
+                    </div>
+                    <div class="reference-list">
+                        {% for item in result.reference_prices.shopee[:5] %}
+                        <div class="reference-item">
+                            <div class="reference-info">
+                                <div class="reference-title">{{ item.title }}</div>
+                                {% if item.url %}
+                                <a href="{{ item.url }}" target="_blank" class="reference-link">查看商品 →</a>
+                                {% endif %}
+                            </div>
+                            <div class="reference-price">NT$ {{ "%.0f"|format(item.price) }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                
+                <!-- 露天參考價格 -->
+                {% if result.reference_prices.ruten %}
+                <div class="platform-section">
+                    <div class="platform-header">
+                        <span class="platform-icon">🏪</span>
+                        <span class="platform-name">露天拍賣</span>
+                    </div>
+                    <div class="reference-list">
+                        {% for item in result.reference_prices.ruten[:5] %}
+                        <div class="reference-item">
+                            <div class="reference-info">
+                                <div class="reference-title">{{ item.title }}</div>
+                                {% if item.url %}
+                                <a href="{{ item.url }}" target="_blank" class="reference-link">查看商品 →</a>
+                                {% endif %}
+                            </div>
+                            <div class="reference-price">NT$ {{ "%.0f"|format(item.price) }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if not result.reference_prices.shopee and not result.reference_prices.ruten %}
+                <div class="no-reference">
+                    <p>⚠️ 找不到相關價格資料</p>
+                    <p style="font-size: 0.9em; color: #999; margin-top: 10px;">爬蟲無法取得該物品的市場價格，請稍後再試</p>
+                </div>
+                {% endif %}
+        </div>
+        {% else %}
+        <div class="reference-section">
+            <h3>📋 市場參考價格</h3>
+            <div class="no-reference">
+                <p>⚠️ 找不到相關價格資料</p>
+                <p style="font-size: 0.9em; color: #999; margin-top: 10px;">爬蟲無法取得該物品的市場價格，請稍後再試</p>
+            </div>
+        </div>
+        {% endif %}
+        
+        <div class="actions">
+            <a href="/" class="btn">重新評估</a>
+            <a href="/history" class="btn btn-secondary">查看歷史記錄</a>
+        </div>
+    </div>
+</body>
+</html>
+

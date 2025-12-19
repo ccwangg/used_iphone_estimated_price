@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['-iphone', '-iphone12', '-iphone13']
+
+roboflow:
+  workspace: test-csibs
+  project: iphone-og4hk-6w9ky
+  version: 1
+  license: CC BY 4.0
+  url: https://app.roboflow.com/test-csibs/iphone-og4hk-6w9ky/1

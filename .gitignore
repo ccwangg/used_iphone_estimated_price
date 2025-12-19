@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Flask
+instance/
+.webassets-cache
+
+# 資料庫
+*.db
+*.sqlite
+*.sqlite3
+
+# 上傳檔案
+uploads/
+static/results/
+
+# 模型檔案（可選，如果不想上傳大型模型）
+*.pt
+*.pth
+*.onnx
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 日誌
+*.log
+
+# 環境變數
+.env
+.env.local
+
+gemma-keras-gemma_1.1_instruct_2b_en-v4/

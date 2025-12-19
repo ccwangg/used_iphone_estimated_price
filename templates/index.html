@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 二手物價值評估系統</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+        }
+        
+        .upload-area {
+            border: 3px dashed #667eea;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .upload-area:hover {
+            background-color: #f8f9ff;
+            border-color: #764ba2;
+        }
+        
+        .upload-area.dragover {
+            background-color: #e8ebff;
+            border-color: #764ba2;
+        }
+        
+        .upload-icon {
+            font-size: 48px;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        input[type="file"] {
+            display: none;
+        }
+        
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        input[type="number"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .preview-image {
+            max-width: 100%;
+            max-height: 300px;
+            margin-top: 20px;
+            border-radius: 10px;
+            display: none;
+        }
+        
+        .flash-messages {
+            margin-bottom: 20px;
+        }
+        
+        .flash-message {
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .flash-error {
+            background-color: #fee;
+            color: #c33;
+            border: 1px solid #fcc;
+        }
+        
+        .flash-success {
+            background-color: #efe;
+            color: #3c3;
+            border: 1px solid #cfc;
+        }
+        
+        .info-text {
+            font-size: 0.85em;
+            color: #888;
+            margin-top: 5px;
+        }
+        
+        .nav-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .nav-link a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .nav-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 iPhone 二手價格評估系統</h1>
+        <p class="subtitle">上傳 iPhone 照片，AI 自動辨識型號並評估二手價值</p>
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message flash-error">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        <form method="POST" action="/upload" enctype="multipart/form-data" id="uploadForm">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">📷</div>
+                <p>點擊或拖曳圖片到此處上傳</p>
+                <p class="info-text">支援 PNG, JPG, JPEG, GIF, WEBP (最大 16MB)</p>
+                <input type="file" name="file" id="fileInput" accept="image/*" required>
+            </div>
+            <img id="previewImage" class="preview-image" alt="預覽圖片">
+            
+            <div class="form-group">
+                <label for="condition">外觀狀況評分 (1-5分)</label>
+                <select name="condition" id="condition" required>
+                    <option value="1">1分 - 嚴重損壞</option>
+                    <option value="2">2分 - 明顯使用痕跡</option>
+                    <option value="3" selected>3分 - 一般使用狀況</option>
+                    <option value="4">4分 - 輕微使用痕跡</option>
+                    <option value="5">5分 - 幾乎全新</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="warranty_months">保固剩餘月數</label>
+                <input type="number" name="warranty_months" id="warranty_months" 
+                       min="0" max="60" value="0" required>
+                <p class="info-text">輸入剩餘保固月數（無保固請輸入 0）</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="screen_broken">螢幕狀況</label>
+                <select name="screen_broken" id="screen_broken" required>
+                    <option value="0" selected>螢幕完好</option>
+                    <option value="1">螢幕有破裂或損壞</option>
+                </select>
+                <p class="info-text">選擇螢幕是否有破裂或損壞</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="camera_ok">鏡頭狀況</label>
+                <select name="camera_ok" id="camera_ok" required>
+                    <option value="1" selected>鏡頭完好</option>
+                    <option value="0">鏡頭有損壞</option>
+                </select>
+                <p class="info-text">選擇鏡頭是否完好</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="battery_health">電池健康度 (%)</label>
+                <input type="number" name="battery_health" id="battery_health" 
+                       min="0" max="100" step="1" value="85" required>
+                <p class="info-text">輸入電池健康度百分比（可在 iPhone 設定中查看）</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="storage">儲存容量 (GB)</label>
+                <select name="storage" id="storage" required>
+                    <option value="128">128 GB</option>
+                    <option value="256" selected>256 GB</option>
+                    <option value="512">512 GB</option>
+                    <option value="1024">1 TB (1024 GB)</option>
+                </select>
+                <p class="info-text">選擇 iPhone 的儲存容量</p>
+            </div>
+            
+            <button type="submit" class="btn">開始評估</button>
+        </form>
+        
+        <div class="nav-link">
+            <a href="/history">查看歷史記錄</a>
+        </div>
+    </div>
+    
+    <script>
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const previewImage = document.getElementById('previewImage');
+        
+        // 點擊上傳區域觸發檔案選擇
+        uploadArea.addEventListener('click', () => {
+            fileInput.click();
+        });
+        
+        // 檔案選擇後顯示預覽
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        // 拖曳上傳
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+        
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+        
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                fileInput.files = files;
+                const event = new Event('change', { bubbles: true });
+                fileInput.dispatchEvent(event);
+            }
+        });
+    </script>
+</body>
+</html>
+
