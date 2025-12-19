@@ -11,7 +11,12 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
+import matplotlib
 import os
+
+# 設定中文字體
+matplotlib.rcParams['font.sans-serif'] = ['Microsoft JhengHei', 'SimHei', 'Arial Unicode MS', 'DejaVu Sans']
+matplotlib.rcParams['axes.unicode_minus'] = False  # 解決負號顯示問題
 
 
 class PriceAnalyzer:
@@ -28,6 +33,7 @@ class PriceAnalyzer:
         self.dt_model = None
         self.cluster_labels = None
         self.price_data = None
+        self.feature_columns = None  # 儲存訓練時使用的特徵欄位
     
     def cluster_prices(self, price_data):
         """
@@ -109,6 +115,10 @@ class PriceAnalyzer:
         if not available_cols:
             raise ValueError("沒有可用的特徵欄位")
         
+        # 儲存使用的特徵欄位，供預測時使用
+        self.feature_columns = available_cols.copy()
+        print(f"[PriceAnalyzer] 訓練模型使用的特徵: {self.feature_columns}")
+        
         X = price_data[available_cols].values
         y = price_data['price'].values
         
@@ -153,18 +163,32 @@ class PriceAnalyzer:
             camera_ok: 鏡頭是否完好 (0=損壞, 1=完好)
             battery_health: 電池健康度 (0.0-1.0)
             storage: 儲存容量 (GB)
-            use_iphone_features: 是否使用 iPhone 專用特徵
+            use_iphone_features: 是否使用 iPhone 專用特徵（已棄用，現在使用訓練時的特徵）
         Returns:
             float: 預測價格
         """
         if self.dt_model is None:
             raise ValueError("決策樹模型尚未訓練，請先呼叫 train_decision_tree()")
         
-        # 準備輸入特徵
-        if use_iphone_features:
-            X = np.array([[condition, warranty_months, screen_broken, camera_ok, battery_health, storage]])
-        else:
-            X = np.array([[condition, warranty_months]])
+        if self.feature_columns is None:
+            raise ValueError("模型特徵資訊遺失，請重新訓練模型")
+        
+        # 根據訓練時使用的特徵來構建輸入
+        # 建立特徵值字典
+        feature_values = {
+            'condition': condition,
+            'warranty_months': warranty_months,
+            'screen_broken': screen_broken,
+            'camera_ok': camera_ok,
+            'battery_health': battery_health,
+            'storage': storage
+        }
+        
+        # 按照訓練時的特徵順序構建輸入向量
+        X = np.array([[feature_values[col] for col in self.feature_columns]])
+        
+        print(f"[PriceAnalyzer] 預測使用的特徵: {self.feature_columns}")
+        print(f"[PriceAnalyzer] 特徵值: {[feature_values[col] for col in self.feature_columns]}")
         
         # 預測
         predicted_price = self.dt_model.predict(X)[0]
@@ -202,16 +226,18 @@ class PriceAnalyzer:
                 s=50
             )
         
-        plt.xlabel('資料索引')
-        plt.ylabel('價格 (NT$)')
-        plt.title('價格分群結果 (K-Means)')
-        plt.legend()
+        plt.xlabel('資料索引', fontsize=12, fontweight='bold')
+        plt.ylabel('價格 (NT$)', fontsize=12, fontweight='bold')
+        plt.title('價格分群結果 (K-Means)', fontsize=14, fontweight='bold', pad=20)
+        plt.legend(fontsize=10, loc='best')
         plt.grid(True, alpha=0.3)
         plt.tight_layout()
         
         # 儲存圖片
-        plt.savefig(output_path, dpi=150, bbox_inches='tight')
+        plt.savefig(output_path, dpi=150, bbox_inches='tight', facecolor='white')
         plt.close()
+        
+        print(f"[PriceAnalyzer] 圖表已儲存至: {output_path}")
         
         return output_path
 

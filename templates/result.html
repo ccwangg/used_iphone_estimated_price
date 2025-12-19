@@ -359,7 +359,7 @@
         </div>
         
         <!-- 參考價格區塊 -->
-        {% if result.reference_prices and (result.reference_prices.shopee or result.reference_prices.ruten) %}
+        {% if result.reference_prices and (result.reference_prices.shopee or result.reference_prices.ruten or result.reference_prices.dcard or result.reference_prices.facebook) %}
         <div class="reference-section">
             <h3>📋 市場參考價格（最新五筆）</h3>
                 <!-- 蝦皮參考價格 -->
@@ -408,7 +408,53 @@
                 </div>
                 {% endif %}
                 
-                {% if not result.reference_prices.shopee and not result.reference_prices.ruten %}
+                <!-- Dcard 參考價格 -->
+                {% if result.reference_prices.dcard %}
+                <div class="platform-section">
+                    <div class="platform-header">
+                        <span class="platform-icon">💬</span>
+                        <span class="platform-name">Dcard 二手交易</span>
+                    </div>
+                    <div class="reference-list">
+                        {% for item in result.reference_prices.dcard[:5] %}
+                        <div class="reference-item">
+                            <div class="reference-info">
+                                <div class="reference-title">{{ item.title }}</div>
+                                {% if item.url %}
+                                <a href="{{ item.url }}" target="_blank" class="reference-link">查看文章 →</a>
+                                {% endif %}
+                            </div>
+                            <div class="reference-price">NT$ {{ "%.0f"|format(item.price) }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                
+                <!-- Facebook 參考價格 -->
+                {% if result.reference_prices.facebook %}
+                <div class="platform-section">
+                    <div class="platform-header">
+                        <span class="platform-icon">📘</span>
+                        <span class="platform-name">Facebook 二手社團</span>
+                    </div>
+                    <div class="reference-list">
+                        {% for item in result.reference_prices.facebook[:5] %}
+                        <div class="reference-item">
+                            <div class="reference-info">
+                                <div class="reference-title">{{ item.title }}</div>
+                                {% if item.url %}
+                                <a href="{{ item.url }}" target="_blank" class="reference-link">查看貼文 →</a>
+                                {% endif %}
+                            </div>
+                            <div class="reference-price">NT$ {{ "%.0f"|format(item.price) }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if not result.reference_prices.shopee and not result.reference_prices.ruten and not result.reference_prices.dcard and not result.reference_prices.facebook %}
                 <div class="no-reference">
                     <p>⚠️ 找不到相關價格資料</p>
                     <p style="font-size: 0.9em; color: #999; margin-top: 10px;">爬蟲無法取得該物品的市場價格，請稍後再試</p>

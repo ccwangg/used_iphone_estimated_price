@@ -1,0 +1,33 @@
+
+============================================================
+時間: 2025-12-19 19:38:30
+檔案: 20251219_193826_images.jpg
+錯誤: ValueError: X has 6 features, but DecisionTreeRegressor is expecting 2 features as input.
+追蹤:
+Traceback (most recent call last):
+  File "C:\CSIE\drb_design\final\used_iphone_estimated_price\app.py", line 235, in upload_file
+    predicted_price = price_analyzer.predict_price(
+        user_condition,
+    ...<5 lines>...
+        use_iphone_features=True
+    )
+  File "C:\CSIE\drb_design\final\used_iphone_estimated_price\model.py", line 170, in predict_price
+    predicted_price = self.dt_model.predict(X)[0]
+                      ~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\User\anaconda3\Lib\site-packages\sklearn\tree\_classes.py", line 530, in predict
+    X = self._validate_X_predict(X, check_input)
+  File "C:\Users\User\anaconda3\Lib\site-packages\sklearn\tree\_classes.py", line 489, in _validate_X_predict
+    X = validate_data(
+        self,
+    ...<4 lines>...
+        ensure_all_finite=ensure_all_finite,
+    )
+  File "C:\Users\User\anaconda3\Lib\site-packages\sklearn\utils\validation.py", line 2965, in validate_data
+    _check_n_features(_estimator, X, reset=reset)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\anaconda3\Lib\site-packages\sklearn\utils\validation.py", line 2829, in _check_n_features
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: X has 6 features, but DecisionTreeRegressor is expecting 2 features as input.
+

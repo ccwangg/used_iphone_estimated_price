@@ -121,7 +121,42 @@
             <h3>辨識資訊</h3>
             <p><strong>辨識結果：</strong>{{ item_name }}</p>
             <p><strong>信心度：</strong>{{ "%.1f"|format(confidence * 100) }}%</p>
+            {% if error_details %}
+            <p><strong>總偵測數：</strong>{{ error_details.total_detections }}</p>
+            {% if error_details.detected_classes %}
+            <p><strong>偵測到的類別：</strong>{{ error_details.detected_classes|join(', ') }}</p>
+            {% endif %}
+            {% endif %}
         </div>
+        
+        {% if error_details and error_details.all_predictions %}
+        <div class="error-details">
+            <h3>詳細偵測結果</h3>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                <thead>
+                    <tr style="background: #667eea; color: white;">
+                        <th style="padding: 8px; text-align: left; border: 1px solid #ddd;">類別名稱</th>
+                        <th style="padding: 8px; text-align: left; border: 1px solid #ddd;">信心度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pred in error_details.all_predictions %}
+                    <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd;">{{ pred.name }}</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">{{ "%.2f"|format(pred.confidence * 100) }}%</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+        
+        {% if debug_info %}
+        <div class="error-details" style="background: #f0f0f0;">
+            <h3>調試資訊</h3>
+            <pre style="text-align: left; font-size: 0.9em; overflow-x: auto;">{{ debug_info|tojson(indent=2) }}</pre>
+        </div>
+        {% endif %}
         
         <div class="suggestions">
             <h3>建議</h3>

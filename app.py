@@ -21,11 +21,13 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webp'}
 
 # 初始化模組
+print("\n[APP] 正在初始化 iPhonePredictor...")
 iphone_predictor = iPhonePredictor()
+print("[APP] iPhonePredictor 初始化完成\n")
 # 使用新的資料引擎（從 archive 資料夾讀取真實資料）
 data_engine = DataEngine(
     data_dir='archive',
-    database_file='mock_data.csv',
+    database_file='archive/iphoneFeaturesPriceDataset.csv',  # 使用 iphoneFeaturesPriceDataset.csv
     min_similarity=70  # 模糊匹配最低相似度 70%
 )
 price_analyzer = PriceAnalyzer(n_clusters=3)
@@ -83,7 +85,7 @@ def upload_file():
     """處理圖片上傳和處理"""
     if 'file' not in request.files:
         flash('請選擇要上傳的圖片')
-        return redirect(request.url)
+        return redirect(url_for('index'))
     
     file = request.files['file']
     user_condition = request.form.get('condition', type=int)
@@ -108,18 +110,55 @@ def upload_file():
         
         try:
             # 1. iPhone 影像辨識
+            print(f"\n[APP] 開始處理上傳的圖片: {filename}")
+            print(f"[APP] 檔案路徑: {filepath}")
+            
             iphone_result = iphone_predictor.predict(filepath)
             item_name = iphone_result['item_name']
             iphone_model = iphone_result.get('iphone_model', 'iPhone')
             confidence = iphone_result['confidence']
             is_iphone = iphone_result.get('is_iphone', False)
+            debug_info = iphone_result.get('debug_info', {})
+            all_predictions = iphone_result.get('all_predictions', [])
+            
+            print(f"[APP] 辨識結果:")
+            print(f"  - item_name: {item_name}")
+            print(f"  - iphone_model: {iphone_model}")
+            print(f"  - confidence: {confidence}")
+            print(f"  - is_iphone: {is_iphone}")
+            print(f"  - 總偵測數: {len(all_predictions)}")
             
             # 檢查是否為 iPhone
-            if not is_iphone or item_name == 'unknown' or confidence < 0.1:
+            # 如果偵測到 iPhone（is_iphone == True），即使信心度低於 0.05 也接受
+            # 只有在完全沒有偵測到或結果為 unknown 時才判定為失敗
+            if not is_iphone or item_name == 'unknown':
+                print(f"[APP] ⚠ 辨識失敗！")
+                print(f"[APP] 失敗原因:")
+                print(f"  - is_iphone: {is_iphone}")
+                print(f"  - item_name: {item_name}")
+                print(f"  - confidence: {confidence}")
+                print(f"  - 所有預測: {[p['name'] for p in all_predictions]}")
+                
+                # 準備詳細的錯誤資訊
+                error_details = {
+                    'is_iphone': is_iphone,
+                    'item_name': item_name,
+                    'confidence': confidence,
+                    'total_detections': len(all_predictions),
+                    'detected_classes': [p['name'] for p in all_predictions],
+                    'all_predictions': all_predictions
+                }
+                
                 return render_template('error.html', 
                                      error_type='unknown_item',
                                      item_name='非 iPhone 或無法辨識',
-                                     confidence=confidence)
+                                     confidence=confidence,
+                                     error_details=error_details,
+                                     debug_info=debug_info)
+            
+            # 如果信心度低於 0.05，顯示警告但仍繼續處理
+            if confidence < 0.05:
+                print(f"[APP] ⚠ 警告: 信心度較低 ({confidence:.3f})，但仍使用此結果")
             
             # 2. 產生標註圖片
             annotated_path = os.path.join(
@@ -165,7 +204,9 @@ def upload_file():
             
             # 檢查是否有參考價格資料
             has_references = (reference_prices.get('shopee') and len(reference_prices['shopee']) > 0) or \
-                           (reference_prices.get('ruten') and len(reference_prices['ruten']) > 0)
+                           (reference_prices.get('ruten') and len(reference_prices['ruten']) > 0) or \
+                           (reference_prices.get('dcard') and len(reference_prices['dcard']) > 0) or \
+                           (reference_prices.get('facebook') and len(reference_prices['facebook']) > 0)
             
             if len(price_data) == 0:
                 return render_template('error.html',
@@ -241,6 +282,26 @@ def upload_file():
             return render_template('result.html', result=result_data)
         
         except Exception as e:
+            import traceback
+            error_traceback = traceback.format_exc()
+            
+            print(f"\n[APP] ❌ 發生未預期的錯誤！")
+            print(f"[APP] 錯誤類型: {type(e).__name__}")
+            print(f"[APP] 錯誤訊息: {str(e)}")
+            print(f"[APP] 完整錯誤追蹤:")
+            print(error_traceback)
+            
+            # 記錄錯誤到檔案（可選）
+            try:
+                with open('error_log.txt', 'a', encoding='utf-8') as f:
+                    f.write(f"\n{'='*60}\n")
+                    f.write(f"時間: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+                    f.write(f"檔案: {filename}\n")
+                    f.write(f"錯誤: {type(e).__name__}: {str(e)}\n")
+                    f.write(f"追蹤:\n{error_traceback}\n")
+            except:
+                pass
+            
             flash(f'處理過程中發生錯誤: {str(e)}')
             return redirect(url_for('index'))
     
